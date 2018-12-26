@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+</head>
+<body>
+
+{% verbatim myblock %}
+    <div id="app">
+        {{ info }}<br>
+        {{ number }}
+        <button @click="add">add</button>
+        <input v-model="text">
+        {{ text }}
+        {{ test() }}
+    </div>
+{% endverbatim myblock %}
+</body>
+<script>
+new Vue({
+    el: "#app",
+    data: {
+      info: "this the first vue app",
+        number: 11,
+        text: "text"
+    },
+    methods:{
+        add: function(){
+            this.number = this.number +1;
+        },
+        test(){
+            return "hello"
+        }
+    },
+})
+</script>
+
+</html>

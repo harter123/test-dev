@@ -1,0 +1,65 @@
+ruby calabash 
+
+php 接口的测试框架  基于 tcp 不是http 
+
+go  开发后端程序 
+python + vue 全栈开发  前端+后端
+
+1.去学习一门底层语言 C  C++  pascal  
+2. 编写代码培养自己的规范 ， 命名规范 
+3. 注重一下细节 
+
+设计模式， 代码整洁之道
+https://github.com/harter123/test-dev
+
+
+第一个阶段：vue介绍和基础
+	1. vue 特点，特性 以及如何跟django结合
+	2. vue 结构说明
+	3. vue 指令
+	4. vue 自定义事件
+	5. vue 计算属性
+	6. vue 组件
+第二阶段：vue cli 独立项目
+    1.项目结构
+	2.原理说明
+	3.路由方式
+	4.前端后端分离
+第三个阶段：接口测试平台实战
+    1.跟虫师介绍的项目有点类似
+	2.vue打包介绍
+	3.vue部署生产环境上去：
+	  vue+nodejs+nginx
+	  uwsgi+django+nginx
+	  
+开发环境： pycharm， webstorm
+	xxx_xxxx      xxxSccc
+	
+知识：
+HTML
+CSS
+javaScript
+jQuery
+ajax
+python
+django
+git
+	
+vue.js：
+  关键字： 渐进式， 绑定， 视图，简单
+	
+控件库： element-ui  iview
+	避免重复造轮子
+	
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+     
+
