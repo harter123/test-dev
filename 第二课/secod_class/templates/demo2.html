@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo2</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+</head>
+<body>
+{% verbatim myblock %}
+    <div id="app">
+        <span >{{ message+1 }}</span>
+        <span v-html="html"
+        v-bind:vvvvvv="id + '-aaa'" v-bind:class="myclass"
+        ></span>
+        <br>
+
+        <span v-html="html" :id="id"
+        :vvvvvv="id" :class="myclass"
+        ></span>
+
+        <input v-model="message">
+    </div>
+
+{% endverbatim myblock %}
+</body>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            message: "hello",
+            html: "<span style='color:red'>zzz</span>",
+            id: 'myid',
+            myclass: 'myclass1',
+        },
+        methods: {
+            add(){
+                return "xxx"
+            },
+        },
+        watch: {
+            message: function (value) {
+
+            }
+        },
+        computed: {
+            // 计算属性的 getter
+            reversedMessage: function () {
+                // `this` 指向 vm 实例
+                return this.message.split('').reverse().join('')
+            }
+        },
+
+    });
+
+
+</script>
+
+<style>
+    .myclass{
+        font-size: 20px;
+    }
+
+    .myclass1{
+        font-size: 30px;
+    }
+
+</style>
+</html>

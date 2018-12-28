@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo2</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+</head>
+<body>
+{% verbatim myblock %}
+    <div id="app">
+        <span v-if="flag">{{ message1 }}</span>
+
+        <span>{{ message2 }}</span>
+    </div>
+
+{% endverbatim myblock %}
+</body>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            message1: "message1",
+            message2: 'message2',
+            flag:true,
+        },
+        methods: {
+            add(){
+                return "xxx"
+            },
+        },
+    });
+
+
+</script>
+
+<style>
+    .myclass{
+        font-size: 20px;
+    }
+
+    .myclass1{
+        font-size: 30px;
+    }
+
+</style>
+</html>
