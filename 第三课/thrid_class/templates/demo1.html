@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo1</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/fetch/3.0.0/fetch.min.js"></script>
+</head>
+<body>
+{% verbatim myblock %}
+    <div id="app">
+        {{ message }}
+    </div>
+{% endverbatim myblock %}
+</body>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            message: "hello",
+        },
+        methods: {
+            add(){
+                return "xxx"
+            },
+        },
+        created: function () {
+            fetch("/json/array",{
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                mode: "cors",
+                credentials: "include",
+                body: JSON.stringify({
+                    content: "留言内容"
+                })
+            }).then(data=>{
+                console.log(data);
+            })
+        },
+
+    });
+</script>
+</html>

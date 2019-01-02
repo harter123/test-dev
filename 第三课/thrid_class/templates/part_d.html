@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo1</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/fetch/3.0.0/fetch.min.js"></script>
+</head>
+<body>
+{% verbatim myblock %}
+    <div id="app">
+        {{ message }}
+        <button v-on:click="change">change</button>
+        <button @click="change1('change')" onclick="f()">change1</button>
+        <input v-on:keyup.enter="change1('change')" @change=""  @focus="" @blur="">
+
+    </div>
+{% endverbatim myblock %}
+</body>
+<script>
+    function f() {
+        alert('1');
+    }
+    var app = new Vue({
+        el: "#app",
+        data: {
+            message: "hello",
+            fruits: ["apple", "orange", "banana"],
+        },
+        methods: {
+            change() {
+                this.message="new world"
+            },
+            change1(message) {
+                this.message=message;
+            },
+        },
+        created: function () {
+        },
+
+    });
+</script>
+</html>

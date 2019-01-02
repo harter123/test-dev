@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo1</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/fetch/3.0.0/fetch.min.js"></script>
+</head>
+<body>
+{% verbatim myblock %}
+    <div id="app">
+        {{ message }}
+        <ul>
+            <li v-for="value in fruits">{{ value }}</li>
+        </ul>
+        <ul>
+            <li v-for="(value, key) in fruits">{{ key }}: {{ value }}</li>
+        </ul>
+
+        <ul>
+            <li v-for="(value, key, index) in fruits">{{ index }},{{ key }}: {{ value }}</li>
+        </ul>
+
+    </div>
+{% endverbatim myblock %}
+</body>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            message: "hello",
+            fruits: {
+              "a": "apple",
+              "b": "orange",
+              "c": "banana"
+            },
+        },
+        methods: {
+            add() {
+                return "xxx"
+            },
+        },
+        created: function () {
+            this.message = "new hello";
+        },
+
+    });
+</script>
+</html>
