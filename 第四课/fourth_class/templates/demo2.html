@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo1</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/fetch/2.0.4/fetch.js"></script>
+
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+</head>
+<body>
+{% verbatim myblock %}
+    <div id="app">
+        key: <input v-model="key"> <br/>
+
+        result:
+        <ul>
+            <li v-for="item in results" :key="item">{{ item }}</li>
+        </ul>
+
+        <el-input v-model="input" placeholder="请输入内容"></el-input>
+        input: {{ input }} <br/>
+
+        <el-input
+                type="textarea"
+                :rows="2"
+                placeholder="请输入内容"
+                v-model="textarea">
+        </el-input>
+        textarea: {{ textarea }} <br/>
+
+        <el-checkbox v-model="checked">备选项</el-checkbox>
+        checkbox : {{ checked }} <br/>
+
+        <el-checkbox-group v-model="checkList">
+            <el-checkbox label="A"></el-checkbox>
+            <el-checkbox label="B"></el-checkbox>
+            <el-checkbox label="C"></el-checkbox>
+            <el-checkbox label="禁用" disabled></el-checkbox>
+        </el-checkbox-group>
+        checkbox_group : {{ checkList }} <br/>
+
+        <el-radio-group v-model="radio">
+            <el-radio :label="'3'">备选项3</el-radio>
+            <el-radio :label="6">备选项6</el-radio>
+            <el-radio :label="9">备选项9</el-radio>
+          </el-radio-group>
+        radio_group : {{ radio }} <br/>
+
+        <el-select v-model="selected" placeholder="请选择">
+            <el-option
+              label="apple"
+              value="apple_value">
+            </el-option>
+            <el-option
+              label="orange"
+              value="orange_value">
+            </el-option>
+            <el-option
+              label="banana"
+              value="banana_value">
+            </el-option>
+          </el-select>
+    select : {{ selected }} <br/>
+    </div>
+{% endverbatim myblock %}
+</body>
+<script>
+    function search() {
+        alert("1");
+    }
+    var app = new Vue({
+        el: "#app",
+        data: {
+            key: "",
+            results: [],
+
+            input: "qqq",
+            textarea: "area",
+
+            checked: false,
+            checkList: ["A"],
+
+            radio: '3',
+            selected: "apple_value",
+        },
+        methods: {
+            search() {
+                fetch('http://127.0.0.1:8000/search', {
+                    method: "POST",
+                    body: JSON.stringify({key: app.key}),
+                }).then(function (response) {
+                    return response.json();
+                }).then(function (json) {
+                    app.results = json;
+                })
+            },
+        },
+        computed: {},
+        watch: {
+            key: function (val) {
+                app.search();
+                window.search();
+            }
+        }
+    });
+</script>
+</html>

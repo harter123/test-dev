@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo1</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/fetch/2.0.4/fetch.js"></script>
+</head>
+<body>
+{% verbatim myblock %}
+    <div id="app">
+        firstName: <input v-model="firstName"> <br/>
+        lastName: <input v-model="lastName"> <br/>
+        fullNameComputed: {{ fullNameComputed }}  <br/>
+        fullNameMethod: {{ fullNameMethod() }}  <br/>
+
+        fullNameWatch: {{ fullNameWatch }} <br/>
+
+    </div>
+{% endverbatim myblock %}
+</body>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            firstName: "",
+            lastName: "",
+            message: "",
+
+            fullNameWatch: "",
+        },
+        methods: {
+            fullNameMethod(){
+                return this.firstName + this.lastName;
+            }
+        },
+        computed: {
+            fullNameComputed: function () {
+                return this.firstName + this.lastName;
+            }
+        },
+        watch: {
+            firstName: function (value) {
+                this.fullNameWatch = value + this.lastName;
+            },
+            lastName: function (value) {
+                this.fullNameWatch = this.firstName + value;
+            }
+        }
+    });
+</script>
+</html>
