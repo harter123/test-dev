@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>demo1</title>
-    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
-    <script src="https://cdn.bootcss.com/fetch/2.0.4/fetch.js"></script>
+  <meta charset="UTF-8">
+  <title>demo1</title>
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+  <script src="https://cdn.bootcss.com/fetch/2.0.4/fetch.js"></script>
 </head>
 <body>
 {% verbatim myblock %}
-    <div id="app">
-        {{ message }}
-        <ul>
-            <li v-for="value in fruits">{{ value }}</li>
-        </ul>
+  <div id="app">
+    {{ message }}
+    <ul>
+      <li v-for="value in fruits">{{ value }}</li>
+    </ul>
 
 
-    </div>
+  </div>
 {% endverbatim myblock %}
 </body>
 <script>
@@ -39,10 +39,10 @@
                 .then(function (response) {
                     return response.json();
                 }).then(function (json) {
-                    app.fruits = json;
-                }).catch(function (ex) {
-                    console.log('parsing failed', ex)
-                })
+                app.fruits = json;
+            }).catch(function (ex) {
+                console.log('parsing failed', ex)
+            })
         },
 
     });
