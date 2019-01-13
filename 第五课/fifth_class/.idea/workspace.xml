@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a583938-ac9b-4abe-a671-6b2230d51a90" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/templates/demo1.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/demo1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../第六课/sixth_class/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../第六课/sixth_class/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../第四课/fourth_class/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../第四课/fourth_class/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,8 +17,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fifth_class/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="64" column="42" lean-forward="true" selection-start-line="64" selection-start-column="42" selection-end-line="64" selection-end-column="42" />
+            <state relative-caret-position="1728">
+              <caret line="64" column="42" selection-start-line="64" selection-start-column="42" selection-end-line="64" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -24,7 +26,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fifth_class/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
+            <state relative-caret-position="567">
               <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
               <folding>
                 <element signature="e#635#667#0" expanded="true" />
@@ -36,7 +38,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demo1/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
+            <state relative-caret-position="675">
               <caret line="28" column="27" selection-start-line="27" selection-start-column="16" selection-end-line="28" selection-end-column="27" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
@@ -48,8 +50,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/demo1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="75" column="33" lean-forward="true" selection-start-line="75" selection-start-column="33" selection-end-line="75" selection-end-column="33" />
+            <state relative-caret-position="324">
+              <caret line="87" column="27" lean-forward="true" selection-start-line="87" selection-start-column="27" selection-end-line="87" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -71,7 +73,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-6" />
     <option name="y" value="6" />
     <option name="width" value="870" />
@@ -83,7 +85,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -110,6 +111,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -176,18 +178,19 @@
       <workItem from="1547219293807" duration="224000" />
       <workItem from="1547219745762" duration="121000" />
       <workItem from="1547358614808" duration="5481000" />
+      <workItem from="1547371845332" duration="18000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8607000" />
+    <option name="totallyTimeSpent" value="8625000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="6" width="870" height="688" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.2506173" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.15733737" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.3295082" />
@@ -232,14 +235,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fifth_class/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="64" column="42" lean-forward="true" selection-start-line="64" selection-start-column="42" selection-end-line="64" selection-end-column="42" />
+        <state relative-caret-position="1728">
+          <caret line="64" column="42" selection-start-line="64" selection-start-column="42" selection-end-line="64" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fifth_class/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
+        <state relative-caret-position="567">
           <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
           <folding>
             <element signature="e#635#667#0" expanded="true" />
@@ -249,7 +252,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/demo1/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
+        <state relative-caret-position="675">
           <caret line="28" column="27" selection-start-line="27" selection-start-column="16" selection-end-line="28" selection-end-column="27" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
@@ -259,8 +262,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/demo1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="75" column="33" lean-forward="true" selection-start-line="75" selection-start-column="33" selection-end-line="75" selection-end-column="33" />
+        <state relative-caret-position="324">
+          <caret line="87" column="27" lean-forward="true" selection-start-line="87" selection-start-column="27" selection-end-line="87" selection-end-column="27" />
         </state>
       </provider>
     </entry>

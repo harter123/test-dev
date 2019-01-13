@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e0e2847e-afb8-4009-942d-15aaaad4019a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../第四课/fourth_class/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../第四课/fourth_class/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/demo1/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="5" column="19" lean-forward="true" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+            <state relative-caret-position="189">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
@@ -51,21 +52,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="sixth_class" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sixth_class" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sixth_class" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sixth_class" type="462c0819:PsiDirectoryNode" />
-              <item name="note" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sixth_class" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sixth_class" type="462c0819:PsiDirectoryNode" />
               <item name="sixth_class" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -77,7 +69,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -147,18 +138,18 @@
       <workItem from="1547219714699" duration="800000" />
       <workItem from="1547304651406" duration="1298000" />
       <workItem from="1547358452892" duration="156000" />
-      <workItem from="1547364112004" duration="6359000" />
+      <workItem from="1547364112004" duration="6978000" />
+      <workItem from="1547371822099" duration="19000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8613000" />
+    <option name="totallyTimeSpent" value="9251000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="12" width="870" height="688" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27530864" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28271604" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -261,8 +252,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/demo1/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="19" lean-forward="true" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        <state relative-caret-position="189">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
