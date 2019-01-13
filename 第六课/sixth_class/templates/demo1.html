@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>note</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/fetch/2.0.4/fetch.js"></script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+</head>
+<body>
+{% verbatim myblock %}
+
+    <div id="app" class="login-main">
+        <div :class="classValue">test1</div>
+
+        <div :class="{'red-class': flag, 'blue-class': !flag}">test2</div>
+
+        <div :class="classObject">test3</div>
+
+        <div :class="[classValue, sizeClass]">test4</div>
+
+        <el-button @click="changeColor">change</el-button>
+
+
+    </div>
+
+
+{% endverbatim myblock %}
+</body>
+<script>
+
+    var app = new Vue({
+        el: "#app",
+        data: {
+            classValue: "red-class",
+            flag: false,
+            sizeClass: "size-class"
+
+        },
+        methods: {
+            changeColor() {
+                this.flag = !this.flag;
+                if ("red-class" === this.classValue) {
+                    this.classValue = 'blue-class'
+                } else {
+                    this.classValue = 'red-class'
+                }
+            }
+        },
+        computed: {
+            classObject: function () {
+                return {'red-class': !this.flag, 'blue-class': this.flag}
+            }
+        }
+    });
+
+
+</script>
+
+<style>
+    .login-main {
+        width: 350px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+    }
+
+    .red-class {
+        color: red;
+    }
+
+    .blue-class {
+        color: blue;
+    }
+
+    .size-class {
+        font-size: 20px;
+    }
+</style>
+</html>

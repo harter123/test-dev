@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>note</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/fetch/2.0.4/fetch.js"></script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+</head>
+<body>
+{% verbatim myblock %}
+    <!-- 定义模板 -->
+    <template id="myAccount">
+        <div>
+            <h2>登录页面</h2>
+            <h3>注册页面</h3>
+        </div>
+    </template>
+
+    <div id="app" class="login-main">
+        ssss
+        <runoob></runoob>
+
+        <button-counter></button-counter>
+        <child message="hello!"></child>
+        <account> </account>
+    <account> </account>
+
+
+    </div>
+
+    <div id="app1" class="login-main">
+        <runoob1></runoob1>
+        <button-counter></button-counter>
+    </div>
+{% endverbatim myblock %}
+</body>
+<script>
+    Vue.component('runoob', {
+        template: '<h1>自定义组件!</h1>'
+    });
+    Vue.component('button-counter', {
+        data: function () {
+            return {
+                count: 0
+            }
+        },
+        template: '<button v-on:click="count++">You clicked me \{\{ count \}\} times.</button>'
+    });
+    Vue.component('child', {
+        // 声明 props
+        props: ['message'],
+        // 同样也可以在 vm 实例中像 "this.message" 这样使用
+        template: '<span>\{\{ message \}\}</span>'
+    });
+
+    //定义、注册组件
+    Vue.component('account', {
+        template: '#myAccount'    // template 是 Vue 中的关键字，不能改。
+    });
+    var app = new Vue({
+        el: "#app",
+        data: {},
+        methods: {},
+    });
+
+    var Child = {
+        template: '<h1>自定义组件2</h1>'
+    };
+    new Vue({
+        el: '#app1',
+        components: {
+            // <runoob> 将只在父模板可用
+            'runoob1': Child
+        }
+    })
+</script>
+
+<style>
+    .login-main {
+        width: 350px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+    }
+
+</style>
+</html>

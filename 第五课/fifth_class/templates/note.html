@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>note</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/fetch/2.0.4/fetch.js"></script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+</head>
+<body>
+{% verbatim myblock %}
+    <div id="app" class="login-main">
+        <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
+            <el-form-item label="用户名称" prop="name">
+                <el-input v-model="ruleForm.name" type="text"></el-input>
+            </el-form-item>
+
+            <el-form-item label="用户密码" prop="pwd">
+                <el-input v-model="ruleForm.pwd" type="password"></el-input>
+            </el-form-item>
+
+            <el-form-item>
+                <el-button type="primary" @click="login('ruleForm')">登录</el-button>
+                <el-button @click="register('ruleForm')">注册</el-button>
+            </el-form-item>
+        </el-form>
+    </div>
+{% endverbatim myblock %}
+</body>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            ruleForm: {
+                name: '',
+                pwd: '',
+            },
+            rules: {
+                name: [
+                    {required: true, message: '请输入用户名称', trigger: 'blur'},
+                    {min: 3, max: 20, message: '长度在 3 到 20 个字符', trigger: 'blur'}
+                ],
+                pwd: [
+                    {required: true, message: '请输入用户密码', trigger: 'blur'},
+                    {min: 3, max: 20, message: '长度在 3 到 20 个字符', trigger: 'blur'}
+                ],
+            }
+        },
+        methods: {
+            login(formName) {
+                this.$refs[formName].validate((valid) => {
+                    if (valid) {
+                        fetch("/login", {
+                            method: "POST",
+                            body: JSON.stringify({user: this.ruleForm.name, pwd: this.ruleForm.pwd})
+                        }).then(res => {
+                            return res.json();
+                        }).then(data => {
+                            if (true === data.success) {
+                                this.$message.info("login success");
+                            } else {
+                                this.$message.error("login failed")
+                            }
+                        });
+                    } else {
+                        console.log('error submit!!');
+                        return false;
+                    }
+                });
+            },
+            register(formName) {
+                this.$refs[formName].validate((valid) => {
+                    if (valid) {
+                        fetch("/register", {
+                            method: "POST",
+                            body: JSON.stringify({user: this.ruleForm.name, pwd: this.ruleForm.pwd})
+                        }).then(res => {
+                            return res.json();
+                        }).then(data => {
+                            if (true === data.success) {
+                                this.$message.info("login success");
+                            } else {
+                                this.$message.error("login failed")
+                            }
+                        });
+                    } else {
+                        console.log('error submit!!');
+                        return false;
+                    }
+                });
+            }
+        },
+    });
+</script>
+
+<style>
+    .login-main {
+        width: 350px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+    }
+
+</style>
+</html>
