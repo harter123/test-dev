@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>note</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/fetch/2.0.4/fetch.js"></script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+</head>
+<body>
+{% verbatim myblock %}
+    <template id="children">
+        <div>
+            <div>child message : {{ message }}</div>
+            child:
+            <el-button @click="change">changeAutoValue</el-button>
+        </div>
+    </template>
+
+
+    <div id="app">
+        <div>
+            parent: {{ message }}
+            <el-button @click="changeMessage">change parent</el-button>
+        </div>
+        <childp></childp>
+        <childp></childp>
+    </div>
+{% endverbatim myblock %}
+</body>
+<script>
+    Vue.component('childp', {
+        data: function () {
+            return {
+                message:1,
+            }
+        },
+        template: "#children",
+        methods: {
+            change() {
+                this.message = this.message + 1;
+            }
+        },
+    });
+
+    var app = new Vue({
+        el: "#app",
+        data: {
+            message: 1,
+        },
+        methods: {
+            getChildValue(value) {
+                this.message = value;
+            },
+            changeMessage() {
+                this.message = this.message + 1;
+            }
+        },
+
+    });
+</script>
+
+<style>
+    .login-class {
+        width: 400px;
+        height: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 40px;
+    }
+
+    .login-button-class {
+        text-align: right;
+    }
+</style>
+</html>

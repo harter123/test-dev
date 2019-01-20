@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>note</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/fetch/2.0.4/fetch.js"></script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+</head>
+<body>
+{% verbatim myblock %}
+    <div id="app">
+        {{ message }}
+        {{ newMessage }}
+        {{ reverse() }}
+        {{ tmp() }}
+        <span v-html="rawHtml"></span>
+
+        <div v-if="flag">
+            if flag is true
+        </div>
+        <div v-else>
+            if flag is false
+        </div>
+
+        <div v-show="flag">
+            show flag is true
+        </div>
+
+        <button @click="change">change</button>
+        <input v-on:keyup.13="submit">
+
+        <div>
+            <div v-for="item in sites">
+                <div>
+                    {{ item.name }}
+                </div>
+            </div>
+
+            <div v-for="(value, key) in object">
+                <div>
+                    {{ key }} {{ value }}
+                </div>
+            </div>
+        </div>
+
+        <div :class="{ active: isActive }">red color</div>
+
+        <div :style="{ 'color': divcolor}">blue color</div>
+
+        <input v-model="message" placeholder="编辑我……">
+        <input type="checkbox" id="checkbox" v-model="checked">
+
+    <input type="radio" id="runoob" value="Runoob" v-model="picked">
+
+        <runoob :message="message" @change="eventchange"></runoob>
+    <childp></childp>
+    </div>
+
+    <div id="app1">
+        <runoob message="static2"></runoob>
+        <childp></childp>
+    </div>
+{% endverbatim myblock %}
+</body>
+<script>
+    Vue.component('runoob', {
+        props: ['message'],
+        template: '<div><h1>自定义组件1! \{\{ message \}\}</h1> <button @click="change">change</button></div>',
+        methods: {
+            change(){
+                this.$emit('change', 'child event');
+            }
+        }
+    });
+
+    var Child = {
+      template: '<h1>自定义组件2!</h1>'
+    };
+    var app = new Vue({
+        el: "#app",
+        components: {
+            // <runoob> 将只在父模板可用
+            'childp': Child
+        },
+        data: {
+            message: "hello",
+            rawHtml: "<h1>h1</h1>",
+            flag: false,
+            isActive: true,
+            divcolor: 'blue',
+
+            sites: [
+              { name: 'Runoob' },
+              { name: 'Google' },
+              { name: 'Taobao' }
+            ],
+            object: {
+                "first":"1",
+                "second":"2",
+                "third":"3",
+            },
+            checked: true,
+            picked: 'Runoob',
+        },
+        methods: {
+            change(){
+                this.message = "world";
+            },
+            tmp(){
+                return "hahah"
+            },
+            reverse(){
+                return this.message.split('').reverse().join('')
+            },
+            submit(){
+                alert("enter")
+            },
+            eventchange(v){
+                alert('child value change' + v);
+            }
+        },
+        computed: {
+            newMessage: function () {
+                return this.message.split('').reverse().join('')
+            }
+        },
+        watch: {
+            message: function () {
+                alert('change');
+            }
+        },
+        beforeCreate(){
+            console.log('before create')
+        },
+        created(){
+            console.log('created')
+        },
+        beforeMount(){
+            console.log('before mount')
+        },
+        mounted(){
+            console.log('mounted')
+        },
+        beforeUpdate(){
+            console.log('before update')
+        },
+        updated(){
+            console.log('updated')
+        },
+
+    });
+
+    var app1 = new Vue({
+            el: "#app1",
+        }
+    )
+</script>
+
+<style>
+    .active{
+        color: red
+    }
+</style>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>note</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/fetch/2.0.4/fetch.js"></script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+</head>
+<body>
+{% verbatim myblock %}
+
+    <template id="children">
+        <div>child message : {{ staticvalue }}, {{ autovalue }}</div>
+    </template>
+
+    <div id="app">
+        <div>
+            {{ message }}
+            <el-button @click="addMessage">addMessage</el-button>
+        </div>
+
+        <childp staticvalue="static" :autovalue="message"></childp>
+    </div>
+{% endverbatim myblock %}
+</body>
+<script>
+    Vue.component('childp', {
+        props: ["staticvalue", "autovalue"],
+        template: "#children",
+    });
+
+    var app = new Vue({
+        el: "#app",
+        data: {
+            message: 1,
+        },
+        methods: {
+            addMessage(){
+                this.message = this.message + 1;
+            },
+        },
+
+    });
+</script>
+
+<style>
+    .login-class {
+        width: 400px;
+        height: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 40px;
+    }
+
+    .login-button-class {
+        text-align: right;
+    }
+</style>
+</html>
