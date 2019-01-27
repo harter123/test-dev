@@ -1,0 +1,17 @@
+1.node 
+  npm
+  
+  npm get registry ， 默认的源URL：https://registry.npmjs.org/
+  设置为淘宝的源： npm config set registry http://registry.npm.taobao.org/
+  
+  安装cnpm: npm install cnpm -g
+  安装vue： cnpm install vue
+            cnpm install --global vue-cli
+			
+			
+	创建vue 项目： vue init webpack my-project
+	运行项目： cd my-project
+	           npm install 
+			   npm run dev
+2.IDE: webstorm
+    使用webstorm创建vue项目

@@ -73,20 +73,18 @@
                     )
                 }).then(response => {
                     return response.json()
-                }).then(data => {
+                }).then(function(data){
 
                     if (true === data.success) {
-                        this.$message({
+                        app.$message({
                             message: "恭喜你，登录成功",
                             type: "success"
                         });
-                        this.$message.success('恭喜你，登录成功');
                     } else {
-                        this.$message({
+                        app.$message({
                             message: "很抱歉，登录失败",
                             type: "error"
                         });
-                        this.$message.error('很抱歉，登录失败');
                     }
                 })
             }
