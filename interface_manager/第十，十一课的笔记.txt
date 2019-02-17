@@ -1,0 +1,25 @@
+1. vue项目设置：element-ui
+2. 母版设置
+3. 登录页面设置， 主页设置
+4. 登录和注册请求
+5. 登录和注册后端接口设置
+6. django跨域问题设置
+7. django session设置
+
+
+导入图片：
+ 1.把图片发到项目某个目录 assets/interface.png
+ 2.把然后再组件里面import进来 
+import interface_png from './assets/interface.png'
+ 3.然后再data定义一个变量：
+    image: interface_png 
+ 4.然后把image变量绑定到img的src属性里面
+   <img :src="head_img" height="50px" width="50px"/>
+
+{
+   "success": true,
+   "message": "",
+   "data": "",
+}
+
+https://blog.csdn.net/larger5/article/details/81265339
