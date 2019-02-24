@@ -5,7 +5,6 @@
         <img :src="head_img" height="50px" width="50px"/>
         <span>接口测试系统</span>
       </div>
-
       <div>
         <i class="el-icon-info icon-color"></i>&nbsp;关于
       </div>

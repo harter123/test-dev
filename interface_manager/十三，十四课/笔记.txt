@@ -1,0 +1,77 @@
+1.回顾上周的课程
+    响应的通用格式：
+    成功：
+     {
+		success:  true,
+		message: 'xxxxx',
+		data: {
+		}
+	 }
+	 
+	失败：{
+	    success:  false,
+		message: 'xxxxx',
+		data: {
+		}
+	}
+	
+	django rest framework 非常复杂的
+	
+	js的变量 必须export 出来，才可以再其他文件里面import
+   
+	登录的参数： {
+		name: 'user1',
+		pwd: 'password',
+	}
+	
+	return common_code('backend/user/register', {name: name, pwd: pwd})
+	
+2.登录保持化设置
+    1. django固有的session登录设置， win10一直有问题，mac完全可以的
+	2. 自定义的session设置登录
+	    1.后端把session返回给前端（使用django里面的session）
+		2.前端把session保存起来（保存在cookie） 
+		    npm install vue-cookies --save 使用这个库
+			VueCookies.set('token', session, 1209600);
+			VueCookies.get('token');
+			
+		3.前端在请求的时候，把session 放在header
+		4.后端在读取请求header, 把session提取出来
+Django获取Header中的信息
+
+request.META.get("header key") 用于获取header的信息
+注意的是header key必须增加前缀HTTP，同时大写，
+例如你的key为username，那么应该写成：
+request.META.get("HTTP_USERNAME")
+
+另外就是当你的header key中带有中横线，那么自动会被转成下划线，
+例如my-user的写成： request.META.get("HTTP_MY_USER")
+
+		5.后端根据session 获取到对应用户
+			
+			这样获取token，跟http的head
+			token = request.META.get("HTTP_TOKEN", None)
+			
+			获取session的对象
+			session = Session.objects.get(pk=token)
+			
+			
+			django的session固定获取用户的id
+			user_id = session.get_decoded().get('_auth_user_id', None)
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
