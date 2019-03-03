@@ -48,6 +48,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'interface_app.middleware.MyExceptionMiddleware',
 ]
 # 跨域增加忽略
 CORS_ALLOW_CREDENTIALS = True
@@ -75,6 +76,7 @@ CORS_ALLOW_HEADERS = (
     'user-agent',
     'x-csrftoken',
     'x-requested-with',
+    'token',
 )
 
 ROOT_URLCONF = 'impi_project.urls'
