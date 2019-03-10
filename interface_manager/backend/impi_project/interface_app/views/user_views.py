@@ -66,4 +66,3 @@ class UserViews(View):
         else:
             print(form.errors.as_json())
             raise MyException()
-

@@ -1,0 +1,39 @@
+1. 日志的设置
+    https://www.cnblogs.com/zhangqunshi/p/6641173.html
+	1. 在 settings里面添加设置，注意修改日志的路径，需要提前创建logs文件夹
+	2. 在common文件加入
+	    import logging
+        logger = logging.getLogger(__name__)
+	3. 直接调用就可以了
+	
+2. 服务 的功能，包括前后端的增删改查
+
+遵循 restful的设计原则
+service_list_view    /service/    get, post  查询列表，创建
+service_detail_view  /service/1   put, get, delete  更新单个， 获取单个， 删除单个
+
+response 不能把model对象返回给前端，必须是python字典
+
+service的树形结构
+services = [
+	{
+		id: xxx,
+		name: xxx,
+		description: xxxx,
+		parent: xxx,
+		children: [
+			{
+				id: xxx,
+				name: xxx,
+				description: xxxx,
+				parent: xxx,
+				children: []
+			}
+		]
+	}
+]
+
+
+其他风格： 一个url，        代表是一个接口
+restfule:  一个url + 方法， 才是一个接口
+
