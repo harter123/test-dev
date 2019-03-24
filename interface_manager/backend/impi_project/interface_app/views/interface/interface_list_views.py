@@ -1,31 +1,35 @@
 import json
-from interface_app import common
-from interface_app.form.service import ServiceForm
-from interface_app.models.service import Service, IS_ROOT
-from interface_app.utils.service_utils import ServiceUtils
-
+from django.forms.models import model_to_dict
 from django.views.generic import View
+
+from interface_app import common
+from interface_app.form.interface import InterfaceForm
+from interface_app.models.interface import Interface
 from interface_app.my_exception import MyException
 
 
 # Create your views here.
-# service的列表获取和创建的接口
+# interface的列表获取和创建的接口
 
-class ServiceListViews(View):
+class InterfaceListViews(View):
     def get(self, request, *args, **kwargs):
         """
-        获取服务列表
+        获取全部接口列表
         :param request:
         :param args:
         :param kwargs:
         :return:
         """
-        ret = ServiceUtils.get_service_tree_recursion(IS_ROOT)
+        interfaces = Interface.objects.all() # model对象不能直接返回前端，需要转字典
+        ret = []
+        for i in interfaces:
+            ret.append(model_to_dict(i))
+        # ret = [model_to_dict(i) for i in interfaces]
         return common.response_success(ret)
 
     def post(self, request, *args, **kwargs):
         """
-        创建服务
+        创建接口
         :param request:
         :param args:
         :param kwargs:
@@ -33,14 +37,11 @@ class ServiceListViews(View):
         """
         body = request.body
         params = json.loads(body)
-        form = ServiceForm(params)
+        form = InterfaceForm(params)
         result = form.is_valid()
         if result:
-            service = Service.objects.create(**form.cleaned_data)
-            # service = Service.objects.create(name=form.cleaned_data['name'],
-            #                                      description=form.cleaned_data['name'],
-            #                                      parent=form.cleaned_data['parent'])
-            if service:
+            interface = Interface.objects.create(**form.cleaned_data)
+            if interface:
                 return common.response_success()
             else:
                 raise MyException("创建失败")

@@ -18,10 +18,18 @@ from django.urls import path
 from interface_app.views import user_views
 from interface_app.views.service.service_detail_views import ServiceDetailViews
 from interface_app.views.service.service_list_views import ServiceListViews
+from interface_app.views.interface.interface_list_views import InterfaceListViews
+from interface_app.views.interface.interface_detail_views import InterfaceDetailViews
+from interface_app.views.service.service_interface_detail_views import ServiceInterfaceDetailViews
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('backend/user/', user_views.UserViews.as_view()),
+
     path('backend/services/', ServiceListViews.as_view()),
     path('backend/services/<int:pk>', ServiceDetailViews.as_view()),
+    path('backend/services/<int:pk>/interfaces', ServiceInterfaceDetailViews.as_view()),
+
+    path('backend/interfaces/', InterfaceListViews.as_view()),
+    path('backend/interfaces/<int:pk>', InterfaceDetailViews.as_view()),
 ]

@@ -1,20 +1,20 @@
 import json
 from django.forms.models import model_to_dict
-from interface_app import common
-from interface_app.form.service import ServiceForm
-from interface_app.models.service import Service
-
 from django.views.generic import View
+
+from interface_app import common
+from interface_app.form.interface import InterfaceForm
+from interface_app.models.interface import Interface
 from interface_app.my_exception import MyException
 
 
 # Create your views here.
-# service的单个获取，删除，修改的接口
+# interface获取，修改，删除接口
 
-class ServiceDetailViews(View):
+class InterfaceDetailViews(View):
     def get(self, request, pk, *args, **kwargs):
         """
-        获取单个服务
+        获取单个接口
         :param request:
         :param pk:
         :param args:
@@ -22,15 +22,15 @@ class ServiceDetailViews(View):
         :return:
         """
         try:
-            service = Service.objects.get(id=pk)
-        except Service.DoesNotExist:
+            interface = Interface.objects.get(id=pk)
+        except Interface.DoesNotExist:
             return common.response_failed()
         else:
-            return common.response_success(model_to_dict(service))
+            return common.response_success(model_to_dict(interface))
 
     def put(self, request, pk, *args, **kwargs):
         """
-        更新单个服务
+        更新单个接口
         :param request:
         :param pk:
         :param args:
@@ -39,13 +39,10 @@ class ServiceDetailViews(View):
         """
         body = request.body
         params = json.loads(body)
-        form = ServiceForm(params)  # 参数校验
+        form = InterfaceForm(params)  # 参数校验
         result = form.is_valid()
         if result:
-            Service.objects.filter(id=pk).update(**form.cleaned_data)
-            # Service.objects.filter(id=pk).update(name=form.cleaned_data['name'],
-            #                                      description=form.cleaned_data['name'],
-            #                                      parent=form.cleaned_data['parent'])
+            Interface.objects.filter(id=pk).update(**form.cleaned_data)
         else:
             print(form.errors.as_json())
             raise MyException()
@@ -53,12 +50,12 @@ class ServiceDetailViews(View):
 
     def delete(self, request, pk, *args, **kwargs):
         """
-        删除单个服务
+        删除单个接口
         :param request:
         :param pk:
         :param args:
         :param kwargs:
         :return:
         """
-        Service.objects.filter(id=pk).delete()
+        Interface.objects.filter(id=pk).delete()
         return common.response_success()
