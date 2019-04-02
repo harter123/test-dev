@@ -27,6 +27,12 @@ export default new Router({
       props: true,
     },
     {
+      path: '/edit/interface',
+      name: 'edit_interface',
+      component: edit_interface,
+      props: true,
+    },
+    {
       path: '/login',
       name: 'login',
       component: login

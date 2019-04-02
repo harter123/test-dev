@@ -13,7 +13,7 @@ class InterfaceForm(forms.Form):
     parameter = ObjectField(required=False)
     parameter_type = forms.CharField(required=False)
 
-    response = forms.CharField(required=False)
+    response = ObjectField(required=False)
     response_type = forms.CharField(required=False)
 
     service_id = forms.IntegerField(required=True)

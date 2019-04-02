@@ -26,7 +26,7 @@
         </el-select>
       </el-form-item>
       <el-form-item label="头部" prop="header">
-        <editor v-model="rule_form.header" @init="editor_init"
+        <editor v-model="header" @init="editor_init"
                 lang="json" theme="chrome" width="100%" height="150"></editor>
       </el-form-item>
 
@@ -77,9 +77,11 @@
         <el-button type="primary" size="small" @click="add_json_assertion">增加json断言</el-button>
         <div class="parameter-form-body" v-for="(value, index) in json_assertion" :key="index">
           <div class="padding-common">
-            <el-input v-model="value.key"  placeholder="关键字"></el-input>
+            <el-input v-model="value.key" placeholder="关键字"></el-input>
           </div>
-          <div class="padding-common"><el-input v-model="value.value" placeholder="内容"></el-input> </div>
+          <div class="padding-common">
+            <el-input v-model="value.value" placeholder="内容"></el-input>
+          </div>
           <div class="padding-common">
             <el-select v-model="value.type" placeholder="请选择">
               <el-option label="整型" value="int"></el-option>
@@ -105,7 +107,9 @@
         </div>
 
         <div class="parameter-form-body" v-for="(value, index) in text_assertion" :key="index + 100000">
-          <div class="padding-common"><el-input v-model="value.key" placeholder="内容"></el-input> </div>
+          <div class="padding-common">
+            <el-input v-model="value.key" placeholder="内容"></el-input>
+          </div>
           <div class="padding-common">
             <el-select v-model="value.include" placeholder="请选择">
               <el-option label="包含" value="yes"></el-option>
@@ -119,14 +123,16 @@
       </el-form-item>
 
       <el-form-item>
-        <el-button type="primary" @click="submit_form('rule_form')">立即创建</el-button>
-        <el-button @click="reset_form('rule_form')">重置</el-button>
+        <el-button type="primary" @click="submit_form('rule_form')">{{-1 !== rule_form.interface_id ? '更新':'创建'}}</el-button>
+        <el-button>取消</el-button>
       </el-form-item>
     </el-form>
   </div>
 </template>
 
 <script>
+  import {create_interface, update_interface, get_interface} from "@/requests/interface";
+
   export default {
     name: "edit_interface",
     components: {
@@ -141,7 +147,7 @@
 
           host: '',
           url: '',
-          header: '{}',
+          header: {},
 
           parameter_type: 'json',
           parameter: {},
@@ -150,11 +156,14 @@
           response: '{}',
 
           assertion: [],
+
+          service_id: 1,
+
+          interface_id: -1,
         },
         rules: {
           name: [
             {required: true, message: '请输入名称', trigger: 'blur'},
-            {min: 3, max: 5, message: '长度在 3 到 5 个字符', trigger: 'blur'}
           ],
           method: [
             {required: true, message: '请选择请求方法', trigger: 'change'}
@@ -174,6 +183,7 @@
         },
 
         title: '创建接口',
+        header: '{}',
 
         form_parameter: [],
         json_parameter: '{}',
@@ -192,12 +202,115 @@
         require('brace/theme/chrome');
         require('brace/snippets/javascript') //snippet
       },
+      check_edit_interface_data() {
+        //数据校验
+        //处理入参
+        if ('json' === this.rule_form.parameter_type) {
+          try {
+            JSON.parse(this.json_parameter);
+          } catch (e) {
+            return "入参不是json格式";
+          }
+        }
+        //处理出参
+        if ('json' === this.rule_form.response_type) {
+          try {
+            JSON.parse(this.json_response);
+          } catch (e) {
+            return "出参不是json格式";
+          }
+        }
+
+        //处理header
+        try {
+          JSON.parse(this.header);
+        } catch (e) {
+          return "header不是json格式";
+        }
+
+        if (!this.$route.query.service) {
+          return "没有传递service的id";
+        }
+
+        return '';
+      },
+
+      //构造请求数据
+      get_edit_interface_data() {
+        //处理入参
+        if ('json' === this.rule_form.parameter_type) {
+          this.rule_form.parameter = JSON.parse(this.json_parameter);
+        } else {
+          //form形式
+          this.rule_form.parameter = [];
+          for (let i = 0; i < this.form_parameter.length; i++) {
+            if ("" !== this.form_parameter[i].value && "" !== this.form_parameter[i].key) {
+              this.rule_form.parameter.push(this.form_parameter[i]);
+            }
+          }
+        }
+        //处理出参
+        if ('json' === this.rule_form.response_type) {
+          this.rule_form.response = JSON.parse(this.json_response);
+        } else {
+          this.rule_form.response = {
+            text: this.text_response
+          }
+        }
+
+        //处理header
+        this.rule_form.header = JSON.parse(this.header);
+
+        //处理json的断言
+        this.rule_form.assertion = [];
+        for (let i = 0; i < this.json_assertion.length; i++) {
+          if ("" !== this.json_assertion[i].value && "" !== this.json_assertion[i].key) {
+            this.rule_form.assertion.push(this.json_assertion[i]);
+          }
+        }
+
+        //处理text的断言
+        for (let i = 0; i < this.text_assertion.length; i++) {
+          if ("" !== this.text_assertion[i].key) {
+            this.rule_form.assertion.push(this.text_assertion[i]);
+          }
+        }
+        this.rule_form.service_id = Number(this.$route.query.service); //这是字符串，所以需要转类型
+
+        return this.rule_form;
+      },
+
       submit_form(formName) {
         this.$refs[formName].validate((valid) => {
           if (valid) {
-            alert('submit!');
+            let result = this.check_edit_interface_data();
+            if ('' === result) {
+              let data = this.get_edit_interface_data();
+
+              if (-1 !== this.rule_form.interface_id) {
+                //存在代表是编辑
+                update_interface(this.rule_form.interface_id, data).then(data=>{
+                  if(true === data.success){
+                    this.$message.info('编辑成功');
+                  }else{
+                    this.$message.error('编辑接口失败');
+                  }
+                })
+              } else {
+                //不存在代表创建
+                create_interface(data).then(data => {
+                  if (true === data.success) {
+                    this.$message.info('创建成功');
+                  } else {
+                    this.$message.error('创建失败');
+                  }
+                })
+              }
+
+            } else {
+              this.$message.error(result);
+            }
           } else {
-            console.log('error submit!!');
             return false;
           }
         });
@@ -219,7 +332,7 @@
         this.form_parameter.splice(index, 1);
       },
 
-      add_json_assertion(){
+      add_json_assertion() {
         this.json_assertion.push({
           key: '',
           value: '',
@@ -227,18 +340,69 @@
           include: 'yes',
         })
       },
-      delete_json_assertion(index){
+      delete_json_assertion(index) {
         this.json_assertion.splice(index, 1);
       },
 
-      add_text_assertion(){
+      add_text_assertion() {
         this.text_assertion.push({
           key: '',
           include: 'yes',
         })
       },
-      delete_text_assertion(index){
+      delete_text_assertion(index) {
         this.text_assertion.splice(index, 1);
+      },
+
+      get_interface_detail() {
+        get_interface(Number(this.rule_form.interface_id)).then(data => {
+          if (true === data.success) {
+            this.rule_form = data.data;
+            this.rule_form.interface_id = Number(this.$route.query.interface);
+
+            //处理入参
+            if ('json' === this.rule_form.parameter_type) {
+              this.json_parameter = JSON.stringify(this.rule_form.parameter);
+            } else {
+              this.form_parameter = this.rule_form.parameter;
+            }
+            //处理出参
+            if ('json' === this.rule_form.response_type) {
+              this.json_response = JSON.stringify(this.rule_form.response);
+            } else {
+              this.text_response = this.rule_form.response.text;
+            }
+            //处理header
+            this.header = JSON.stringify(this.rule_form.header);
+
+            //处理json的断言
+            //处理text的断言
+            this.text_assertion = [];
+            this.json_assertion = [];
+            for (let i = 0; i < this.rule_form.assertion.length; i++) {
+              if (this.rule_form.assertion[i].value && "" !== this.rule_form.assertion[i].value) {
+                this.json_assertion.push(this.rule_form.assertion[i]);
+              } else {
+                this.text_assertion.push(this.rule_form.assertion[i]);
+              }
+            }
+          } else {
+            this.$message.error('获取接口数据失败')
+          }
+        })
+      }
+    },
+    created() {
+      let interface_id = this.$route.query.interface;
+
+      if (interface_id) {
+        //存在代表编辑
+        this.title = '编辑接口';
+        this.rule_form.interface_id = Number(interface_id);
+        this.get_interface_detail();
+      } else {
+        //不存在代表创建
+        this.title = '创建接口'
       }
     }
   }

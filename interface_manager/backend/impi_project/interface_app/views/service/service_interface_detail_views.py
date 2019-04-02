@@ -22,5 +22,5 @@ class ServiceInterfaceDetailViews(View):
         ret = []
         for i in interfaces:
             ret.append(model_to_dict(i))
-        return common.response_success(model_to_dict(ret))
+        return common.response_success(ret)
 

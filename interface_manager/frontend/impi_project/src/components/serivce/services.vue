@@ -10,6 +10,7 @@
         default-expand-all
         draggable
         @node-drop="drop_service"
+        @node-click="select_service"
         :expand-on-click-node="false">
       <span class="custom-tree-node" slot-scope="{ node, data }">
         <span>{{ node.label }}</span>
@@ -17,10 +18,11 @@
         <span class="el-dropdown-link">
           <i class="el-icon-arrow-down el-icon--right"></i>
         </span>
-        <el-dropdown-menu slot="dropdown" >
+        <el-dropdown-menu slot="dropdown">
           <el-dropdown-item icon="el-icon-plus" :command="{'ops': 'add', 'data': data}">创建</el-dropdown-item>
           <el-dropdown-item icon="el-icon-circle-plus" :command="{'ops': 'edit', 'data': data}">编辑</el-dropdown-item>
-          <el-dropdown-item icon="el-icon-circle-plus-outline" :command="{'ops': 'delete', 'data': data}">删除</el-dropdown-item>
+          <el-dropdown-item icon="el-icon-circle-plus-outline"
+                            :command="{'ops': 'delete', 'data': data}">删除</el-dropdown-item>
         </el-dropdown-menu>
       </el-dropdown>
       </span>
@@ -28,9 +30,9 @@
     </div>
 
     <div class="interface-tree">
-      context
+      <interface_list @update="update_service_interfaces" :interfaces="service_interfaces"
+                      :service_id="service_id"></interface_list>
     </div>
-
 
     <el-dialog
       :title="edit_service.title"
@@ -57,14 +59,23 @@
 </template>
 
 <script>
-  import {create_service, get_services_tree, update_service, delete_service} from "@/requests/service";
+  import {
+    create_service,
+    get_services_tree,
+    update_service,
+    delete_service,
+    get_service_interfaces
+  } from "@/requests/service";
+  import interface_list from '../interface/interface_list'
 
   export default {
     name: 'services',
+    components: {
+      interface_list
+    },
     data() {
       return {
-        services_tree: [
-        ],
+        services_tree: [],
         default_props: {
           label: 'name'
         },
@@ -91,7 +102,10 @@
           description: [
             {required: true, message: '请输入服务描述', trigger: 'blur'},
           ],
-        }
+        },
+
+        service_interfaces: [],
+        service_id: 1,
       }
     },
     methods: {
@@ -107,9 +121,9 @@
       submit_form() {
         this.$refs.edit_service.validate((valid) => {
           if (valid) {
-            if('add' === this.edit_service.mode){
+            if ('add' === this.edit_service.mode) {
               this.add_service_req();
-            }else{
+            } else {
               this.update_service_req();
             }
           } else {
@@ -119,7 +133,7 @@
         });
       },
 
-      handle_command(command){
+      handle_command(command) {
         let ops = command.ops;
         let data = command.data;
 
@@ -146,12 +160,12 @@
         this.edit_service.parent_name = '';
         this.edit_service.id = -1;
       },
-      init_children_service(parent_data){
+      init_children_service(parent_data) {
         this.init_root_service();
         this.edit_service.parent = parent_data.id;
         this.edit_service.parent_name = parent_data.name;
       },
-      init_delete_service(data){
+      init_delete_service(data) {
         this.edit_service.id = data.id;
       },
 
@@ -175,43 +189,58 @@
 
       add_service_req() {
         create_service(this.edit_service.name, this.edit_service.description, this.edit_service.parent).then(data => {
-          if(true === data.success){
+          if (true === data.success) {
             this.get_services_fun();
             this.edit_service.dialog_visible = false;
-          }else{
+          } else {
             this.$message.error('创建失败');
           }
         })
       },
       update_service_req() {
         update_service(this.edit_service.id, this.edit_service.name, this.edit_service.description, this.edit_service.parent).then(data => {
-          if(true === data.success){
+          if (true === data.success) {
             this.get_services_fun();
             this.edit_service.dialog_visible = false;
-          }else{
+          } else {
             this.$message.error('创建失败');
           }
         })
       },
-      delete_service_req(){
+      delete_service_req() {
         this.$confirm('此操作将永久删除服务, 是否继续?', '提示', {
           confirmButtonText: '确定',
           cancelButtonText: '取消',
           type: 'warning'
         }).then(() => {
-          delete_service(this.edit_service.id).then(data=>{
-            if(true === data.success){
+          delete_service(this.edit_service.id).then(data => {
+            if (true === data.success) {
               this.get_services_fun();
-            }else{
+            } else {
               this.$message.error('删除失败');
             }
           });
         }).catch(() => {
         });
       },
-      drop_service(node1, node2, position, event){
+      drop_service(node1, node2, position, event) {
         this.init_drop_service(node1.data, node2.data);
         this.update_service_req();
+      },
+
+      select_service(data) {
+        this.service_id = data.id;
+        this.get_interfaces_func();
+      },
+      get_interfaces_func() {
+        get_service_interfaces(this.service_id).then(data => {
+          if (true === data.success) {
+            this.service_interfaces = data.data;
+          }
+        });
+      },
+      update_service_interfaces() {
+        this.get_interfaces_func();
       }
     },
     mounted() {
