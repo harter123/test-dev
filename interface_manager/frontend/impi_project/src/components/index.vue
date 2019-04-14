@@ -20,7 +20,8 @@
       </el-menu-item>
     </el-menu>
     <div class="index-context">
-      <services></services>
+      <services v-if="'1' === tab"></services>
+      <debug v-if="'4' === tab"></debug>
     </div>
   </div>
 </template>
@@ -28,12 +29,14 @@
 <script>
   import {get_user} from "../requests/user";
   import services from "./serivce/services"
+  import debug from "./debug/debug_url"
 
   export default {
     name: 'index',
     props: ['tab'], // url里面的参数
     components: {
       services,
+      debug,
     },
     data() {
       return {
