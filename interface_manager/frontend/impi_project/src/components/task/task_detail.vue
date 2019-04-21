@@ -1,6 +1,23 @@
 <template>
   <div>
-    <el-button type="primary" @click="open_add_interface">创建接口</el-button>
+    <div>
+      <el-button @click="go_back">返回</el-button>
+      <el-button type="danger">执行</el-button>
+    </div>
+
+    <div class="task-info-style task-info-padding">
+      <div class="task-info-name">
+        名称： {{task.name}}
+      </div>
+      <div class="task-info-description">
+        描述： {{task.description}}
+      </div>
+    </div>
+    <div class="task-info-padding">
+      状态： <span class="red-color">{{task.status}}</span>
+    </div>
+
+    <el-button type="primary">添加接口</el-button>
     <el-table
       :data="page_data"
       style="width: 100%">
@@ -35,7 +52,7 @@
         width="120">
         <template slot-scope="scope">
           <a href="javascript:void(0)" @click="open_edit_interface(scope.row.id)">编辑</a>&nbsp; &nbsp;
-          <a href="javascript:void(0)" @click="open_delete_interface(scope.row.id)">删除</a>
+          <a href="javascript:void(0)" @click="open_remove_interface(scope.row.id)">移除</a>
         </template>
       </el-table-column>
     </el-table>
@@ -45,7 +62,7 @@
         v-if="0 !== page.total"
         :page-size="page.page_size"
         :current-page="page.current" @current-change="current_change"
-        layout="total, prev, pager, next"
+        layout="total,prev, pager, next"
         :total="page.total">
       </el-pagination>
     </div>
@@ -53,45 +70,44 @@
 </template>
 
 <script>
-  import {delete_interface} from "@/requests/interface";
+  import {task_add_interfaces, task_delete_interface, task_get_interfaces} from "@/requests/task";
 
   export default {
-    name: "interface_list",
-    props: ['interfaces', 'service_id'],
+    name: "task_detail",
+    props: ['task'], //任务的详细数据id，name, description等等
     data() {
       return {
         page: {
           total: 0,
           page_size: 10,
           current: 1,
-        }
+        },
+        interfaces: [],
       }
     },
     created() {
       this.page.total = this.interfaces.length;
       this.page.current = 1;
+      this.get_task_interface_list();
     },
     methods: {
-      open_add_interface() {
-        window.open('/add/interface?service=' + this.service_id);
+      go_back(){
+        this.$emit("go_back");
+      },
+      get_task_interface_list() {
+        task_get_interfaces(this.task.id).then(data => {
+          if (true === data.success) {
+            this.interfaces = data.data;
+          } else {
+            this.$message.error("获取任务的接口失败")
+          }
+        })
       },
       open_edit_interface(id) {
         window.open('/edit/interface?service=' + this.service_id + '&interface=' + id);
       },
-      open_delete_interface(id) {
-        this.$confirm('此操作将永久删除该接口, 是否继续?', '提示', {
-          confirmButtonText: '确定',
-          cancelButtonText: '取消',
-          type: 'warning'
-        }).then(() => {
-          delete_interface(id).then(data => {
-            if (true === data.success) {
-              this.$emit('update', {});
-            }
-          })
-        }).catch(() => {
+      open_remove_interface(id) {
 
-        });
       },
       current_change(page) {
         this.page.current = page;
@@ -126,5 +142,21 @@
 <style scoped>
   .page-style {
     text-align: right;
+  }
+
+  .task-info-style {
+    display: flex;
+  }
+  .task-info-name {
+    width: 50%;
+  }
+  .task-info-description {
+    width: 50%;
+  }
+  .task-info-padding {
+    padding: 10px 0 5px 0;
+  }
+  .red-color {
+    color: orangered;
   }
 </style>

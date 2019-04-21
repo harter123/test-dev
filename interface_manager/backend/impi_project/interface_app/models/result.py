@@ -7,9 +7,9 @@ from interface_app.models.task import Task
 # Create your models here.
 
 class TaskResult(models.Model, Base):
-    version = models.CharField('version', default=1)
+    version = models.IntegerField('version', default=1)
     created = models.DateTimeField("创建时间", auto_now_add=True)
-    task = models.ForeignKey(Task, on_delete=models.SET_NULL)
+    task = models.ForeignKey(Task, on_delete=models.SET_NULL, null=True)
 
     def __str__(self):
         return self.version
@@ -19,8 +19,8 @@ class InterfaceResult(models.Model, Base):
     """
     接口的请求历史结果版本
     """
-    interface = models.ForeignKey(Interface, on_delete=models.SET_NULL)
-    task_result = models.ForeignKey(TaskResult, on_delete=models.SET_NULL)
+    interface = models.ForeignKey(Interface, on_delete=models.SET_NULL, null=True)
+    task_result = models.ForeignKey(TaskResult, on_delete=models.SET_NULL, null=True)
 
     name = models.CharField('name', blank=False, max_length=200)
     description = models.TextField('description', default='')
