@@ -33,3 +33,22 @@ export const task_delete_interface = function (task_id, data) {
   return delete_code(task_path + task_id + "/interfaces", data)
 };
 
+// 任务获取结果列表
+export const task_get_versions = function (task_id) {
+  return get_code(task_path + task_id + "/versions")
+};
+
+// 任务获取历史列表
+export const task_get_version_results = function (version_id) {
+  return get_code(task_path + "versions/" + version_id + '/results')
+};
+
+// 执行任务
+export const run_task = function (task_id) {
+  return post_code(task_path + task_id + '/run')
+};
+
+// 停止任务
+export const stop_task = function (task_id) {
+  return delete_task(task_path + task_id + '/run');
+};

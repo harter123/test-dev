@@ -3,6 +3,7 @@ from django.forms.models import model_to_dict
 from interface_app import common
 from interface_app.models.task import Task, TaskInterface
 from interface_app.models.interface import Interface
+from interface_app.utils.task_utils import TaskUtils
 
 from django.views.generic import View
 from interface_app.my_exception import MyException
@@ -22,7 +23,16 @@ class TaskDetailInterfacesViews(View):
         :return:
         """
         results = TaskInterface.objects.filter(task_id=pk)
-        ret = [model_to_dict(i.interface) for i in results]
+        last_result = TaskUtils.get_last_result(pk)
+        ret = []
+        for i in results:
+            tmp = model_to_dict(i.interface)
+            tmp["task_interface_id"] = i.id
+            r = "无"
+            if last_result is not None:
+                r = TaskUtils.get_last_interface_result(last_result.id, i.interface_id)
+            tmp["result"] = r
+            ret.append(tmp)
         return common.response_success(ret)
 
     def post(self, request, pk, *args, **kwargs):

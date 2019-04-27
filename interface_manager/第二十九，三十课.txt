@@ -1,0 +1,6 @@
+完善任务详情的设置
+1.选择接口的ui
+2.展示测试结果的ui
+
+TaskResult.objects.filter(task_id=task_id).order_by('-version') 倒序
+TaskResult.objects.filter(task_id=task_id).order_by('version')  正序
