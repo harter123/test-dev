@@ -4,6 +4,7 @@ from interface_app import common
 from interface_app.form.task import TaskForm
 from interface_app.models.task import Task, TaskInterface
 from interface_app.models.result import TaskResult
+from interface_app.utils.task_utils import TaskUtils
 
 from django.views.generic import View
 from interface_app.my_exception import MyException
@@ -31,6 +32,7 @@ class TaskDetailViews(View):
             tmp["status"] = task.get_status_display()  # 获取choice的描述
             tmp["interface_count"] = TaskInterface.objects.filter(task_id=task.id).count()
             tmp["result_count"] = TaskResult.objects.filter(task_id=task.id).count()
+            tmp["last_result"] = TaskUtils.get_last_result_summary(task.id)
         except Task.DoesNotExist:
             return common.response_failed()
         else:

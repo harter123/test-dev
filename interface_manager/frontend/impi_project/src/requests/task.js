@@ -5,6 +5,12 @@ const task_path = 'backend/tasks/';
 export const get_tasks = function () {
   return get_code(task_path)
 };
+
+// 获取任务列表
+export const get_task = function (task_id) {
+  return get_code(task_path + task_id);
+};
+
 // 创建任务
 export const create_task = function (name, description) {
   return post_code(task_path, {name: name, description: description})
@@ -44,8 +50,8 @@ export const task_get_version_results = function (version_id) {
 };
 
 // 执行任务
-export const run_task = function (task_id) {
-  return post_code(task_path + task_id + '/run')
+export const run_task = function (task_id, data) {
+  return post_code(task_path + task_id + '/run', data)
 };
 
 // 停止任务

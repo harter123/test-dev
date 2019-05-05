@@ -22,7 +22,8 @@ from interface_app.views.interface.interface_list_views import InterfaceListView
 from interface_app.views.interface.interface_detail_views import InterfaceDetailViews
 from interface_app.views.service.service_interface_detail_views import ServiceInterfaceDetailViews
 from interface_app.views.debug.debug_list_views import DebugListViews
-from interface_app.views.debug.test_list_views import TestListViews
+from interface_app.views.debug.test_list0_views import TestList0Views
+from interface_app.views.debug.test_list1_views import TestList1Views
 from interface_app.views.task.task_detail_views import TaskDetailViews
 from interface_app.views.task.task_list_views import TaskListViews
 from interface_app.views.task.task_detail_interfaces_views import TaskDetailInterfacesViews
@@ -42,7 +43,8 @@ urlpatterns = [
     path('backend/interfaces/<int:pk>', InterfaceDetailViews.as_view()),
 
     path('backend/debug/', DebugListViews.as_view()),
-    path('backend/test/', TestListViews.as_view()),
+    path('backend/test0/', TestList0Views.as_view()),
+    path('backend/test1/', TestList1Views.as_view()),
 
     path('backend/tasks/', TaskListViews.as_view()),
     path('backend/tasks/<int:pk>', TaskDetailViews.as_view()),

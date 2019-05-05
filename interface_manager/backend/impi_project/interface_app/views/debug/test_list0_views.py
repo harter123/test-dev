@@ -9,7 +9,7 @@ from interface_app.utils.interface_utils import InterfaceUtils
 # Create your views here.
 # 用户测试的接口
 
-class TestListViews(View):
+class TestList0Views(View):
     def post(self, request, *args, **kwargs):
         """
         测试的post请求
@@ -22,7 +22,6 @@ class TestListViews(View):
         print(request.body)
         params = json.loads(body)
         test = params.get('test', None)
-        print(params)
         if test is not None:
             return common.response_success(params)
         else:
@@ -39,7 +38,6 @@ class TestListViews(View):
         body = request.body
         params = json.loads(body)
         test = params.get('test', None)
-        print(params)
         if test is not None:
             return common.response_success(params)
         else:
@@ -56,7 +54,6 @@ class TestListViews(View):
         body = request.body
         params = json.loads(body)
         test = params.get('test', None)
-        print(params)
         if test is not None:
             return common.response_success(params)
         else:
