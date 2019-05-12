@@ -13,24 +13,30 @@ from interface_app.my_exception import MyException
 
 class UserViews(View):
     def get(self, request, *args, **kwargs):
-        token = request.META.get("HTTP_TOKEN", None)
-        if token is None:
-            raise MyException("用户未登录")
+        user = request.user
+        if user.is_authenticated:
+            return common.response_success({'username': user.username, 'id': user.id})
         else:
-            try:
-                session = Session.objects.get(pk=token)
-            except Session.DoesNotExist:
-                raise MyException("session失效")
-            else:
-                user_id = session.get_decoded().get('_auth_user_id', None)
-                if user_id is None:
-                    raise MyException("用户id失效")
-                try:
-                    user = User.objects.get(pk=user_id)
-                except User.DoesNotExist:
-                    raise MyException("用户不存在")
-                else:
-                    return common.response_success({'username': user.username, 'id': user.id})
+            raise MyException("用户未登录")
+
+        # token = request.META.get("HTTP_TOKEN", None)
+        # if token is None:
+        #     raise MyException("用户未登录")
+        # else:
+        #     try:
+        #         session = Session.objects.get(pk=token)
+        #     except Session.DoesNotExist:
+        #         raise MyException("session失效")
+        #     else:
+        #         user_id = session.get_decoded().get('_auth_user_id', None)
+        #         if user_id is None:
+        #             raise MyException("用户id失效")
+        #         try:
+        #             user = User.objects.get(pk=user_id)
+        #         except User.DoesNotExist:
+        #             raise MyException("用户不存在")
+        #         else:
+        #             return common.response_success({'username': user.username, 'id': user.id})
 
     def post(self, request, *args, **kwargs):
         body = request.body
@@ -42,8 +48,7 @@ class UserViews(View):
                                             password=form.cleaned_data['password'])
             if user:
                 login(request, user)
-                session = request.session.session_key
-                return common.response_success({'session': session})
+                return common.response_success()
             else:
                 raise MyException("注册失败")
         else:
@@ -59,8 +64,7 @@ class UserViews(View):
             user = authenticate(username=form.cleaned_data["username"], password=str(form.cleaned_data["password"]))
             if user:
                 login(request, user)
-                session = request.session.session_key
-                return common.response_success({'session': session})
+                return common.response_success()
             else:
                 raise MyException("登录失败")
         else:

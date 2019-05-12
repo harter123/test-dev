@@ -28,6 +28,7 @@ class TaskDetailVersionViews(View):
             tmp["version"] = i.version
             tmp["task_id"] = i.task_id
             tmp['created'] = i.created.strftime("%Y-%m-%d %H:%M")
+            tmp["id"] = i.id
             ret.append(tmp)
         return common.response_success(ret)
 

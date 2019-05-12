@@ -116,6 +116,7 @@ class RunTaskUtils:
         if not response:
             return True
 
+        print(response)
         for i in interface.assertion:
             result = True
             if "value" in i:

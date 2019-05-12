@@ -51,8 +51,8 @@
             login(this.rule_form.name, this.rule_form.pwd).then(data => {
               if (true === data.success) {
                 // this.$message.info('login success')
-                let session = data.data.session;
-                VueCookies.set('token', session, 1209600);
+                // let session = data.data.session;
+                // VueCookies.set('token', session, 1209600);
                 this.$router.push('/');
                 // window.location='/';
               } else {
@@ -70,8 +70,8 @@
           if (valid) {
             register(this.rule_form.name, this.rule_form.pwd).then(data => {
               if (true === data.success) {
-                let session = data.data.session;
-                VueCookies.set('token', session, 1209600);
+                // let session = data.data.session;
+                // VueCookies.set('token', session, 1209600);
                 this.$router.push('/');
               } else {
                 this.$message.error('retister failed')

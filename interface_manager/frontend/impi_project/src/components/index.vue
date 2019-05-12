@@ -23,6 +23,7 @@
       <services v-if="'1' === tab"></services>
       <debug v-if="'4' === tab"></debug>
       <tasks v-if="'2' === tab"></tasks>
+      <mocks v-if="'3' === tab"></mocks>
     </div>
   </div>
 </template>
@@ -32,6 +33,7 @@
   import services from "./serivce/services"
   import debug from "./debug/debug_url"
   import tasks from "./task/task_list"
+  import mocks from "./mock/mock"
 
   export default {
     name: 'index',
@@ -40,6 +42,7 @@
       services,
       debug,
       tasks,
+      mocks,
     },
     data() {
       return {

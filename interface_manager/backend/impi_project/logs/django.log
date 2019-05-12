@@ -2044,3 +2044,595 @@ RuntimeError: You called this URL via POST, but the URL doesn't end in a slash a
 2019-05-05 23:10:24,582 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/services/ HTTP/1.1" 200 364
 2019-05-05 23:10:27,612 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/ HTTP/1.1" 200 0
 2019-05-05 23:10:27,689 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 404
+2019-05-12 09:51:53,256 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/services/ HTTP/1.1" 200 0
+2019-05-12 09:51:53,258 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/user/ HTTP/1.1" 200 0
+2019-05-12 09:51:53,339 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/services/ HTTP/1.1" 200 364
+2019-05-12 09:51:53,349 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/user/ HTTP/1.1" 200 64
+2019-05-12 10:15:55,005 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/user/ HTTP/1.1" 200 0
+2019-05-12 10:15:55,384 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "PUT /backend/user/ HTTP/1.1" 200 44
+2019-05-12 10:15:55,549 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/services/ HTTP/1.1" 200 0
+2019-05-12 10:15:55,557 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/user/ HTTP/1.1" 200 72
+2019-05-12 10:15:55,593 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/services/ HTTP/1.1" 200 364
+2019-05-12 10:15:57,148 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/ HTTP/1.1" 200 0
+2019-05-12 10:15:57,256 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 404
+2019-05-12 10:15:58,229 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/services/ HTTP/1.1" 200 364
+2019-05-12 10:15:58,736 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 404
+2019-05-12 10:16:00,941 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 404
+2019-05-12 10:16:01,378 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/services/ HTTP/1.1" 200 364
+2019-05-12 10:16:16,916 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 404
+2019-05-12 10:16:19,218 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 404
+2019-05-12 10:16:19,678 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/services/ HTTP/1.1" 200 364
+2019-05-12 10:20:07,779 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/user/ HTTP/1.1" 200 72
+2019-05-12 10:20:07,896 ERROR    C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\utils\log.py[line:228] Internal Server Error: /backend/services/
+Traceback (most recent call last):
+  File "C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\utils\deprecation.py", line 93, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\middleware\clickjacking.py", line 26, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'WSGIRequest' object has no attribute 'get'
+2019-05-12 10:20:07,900 ERROR    C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/services/ HTTP/1.1" 500 60542
+2019-05-12 10:20:09,529 ERROR    C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\utils\log.py[line:228] Internal Server Error: /backend/tasks/
+Traceback (most recent call last):
+  File "C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\utils\deprecation.py", line 93, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\middleware\clickjacking.py", line 26, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'WSGIRequest' object has no attribute 'get'
+2019-05-12 10:20:09,533 ERROR    C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 500 60506
+2019-05-12 10:20:11,787 ERROR    C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\utils\log.py[line:228] Internal Server Error: /backend/tasks/
+Traceback (most recent call last):
+  File "C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\utils\deprecation.py", line 93, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\middleware\clickjacking.py", line 26, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'WSGIRequest' object has no attribute 'get'
+2019-05-12 10:20:11,789 ERROR    C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 500 60506
+2019-05-12 10:20:12,340 ERROR    C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\utils\log.py[line:228] Internal Server Error: /backend/services/
+Traceback (most recent call last):
+  File "C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\utils\deprecation.py", line 93, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\middleware\clickjacking.py", line 26, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'WSGIRequest' object has no attribute 'get'
+2019-05-12 10:20:12,343 ERROR    C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/services/ HTTP/1.1" 500 60542
+2019-05-12 10:20:13,701 ERROR    C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\utils\log.py[line:228] Internal Server Error: /backend/tasks/
+Traceback (most recent call last):
+  File "C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\utils\deprecation.py", line 93, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\middleware\clickjacking.py", line 26, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'WSGIRequest' object has no attribute 'get'
+2019-05-12 10:20:13,702 ERROR    C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 500 60506
+2019-05-12 10:21:05,980 ERROR    C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\utils\log.py[line:228] Internal Server Error: /backend/services/
+Traceback (most recent call last):
+  File "C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\utils\deprecation.py", line 93, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\middleware\clickjacking.py", line 26, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'WSGIRequest' object has no attribute 'get'
+2019-05-12 10:21:05,988 ERROR    C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/services/ HTTP/1.1" 500 60542
+2019-05-12 10:21:06,757 ERROR    C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\utils\log.py[line:228] Internal Server Error: /backend/tasks/
+Traceback (most recent call last):
+  File "C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\utils\deprecation.py", line 93, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\middleware\clickjacking.py", line 26, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'WSGIRequest' object has no attribute 'get'
+2019-05-12 10:21:06,758 ERROR    C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 500 60506
+2019-05-12 10:21:33,274 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/services/ HTTP/1.1" 200 364
+2019-05-12 10:21:34,125 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 404
+2019-05-12 10:22:00,360 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 404
+2019-05-12 10:22:00,428 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/user/ HTTP/1.1" 200 72
+2019-05-12 10:23:03,796 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 404
+2019-05-12 10:23:11,575 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/services/ HTTP/1.1" 200 364
+2019-05-12 10:23:12,820 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 404
+2019-05-12 10:23:15,438 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 404
+2019-05-12 10:23:16,086 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/services/ HTTP/1.1" 200 364
+2019-05-12 10:23:50,061 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 404
+2019-05-12 10:23:56,703 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/2/interfaces HTTP/1.1" 200 0
+2019-05-12 10:23:56,824 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/interfaces HTTP/1.1" 200 858
+2019-05-12 10:24:54,844 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/2/run HTTP/1.1" 200 0
+2019-05-12 10:24:54,860 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "POST /backend/tasks/2/run HTTP/1.1" 200 44
+2019-05-12 10:24:54,873 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/2 HTTP/1.1" 200 0
+2019-05-12 10:24:54,993 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2 HTTP/1.1" 200 75
+2019-05-12 10:24:56,073 ERROR    C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\utils\log.py[line:228] Internal Server Error: /backend/test0/
+Traceback (most recent call last):
+  File "C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\utils\deprecation.py", line 90, in __call__
+    response = self.process_request(request)
+  File "C:\课件\test-dev\interface_manager\backend\impi_project\interface_app\middleware.py", line 18, in process_request
+    raise MyException("用户未登录")
+interface_app.my_exception.MyException: 用户未登录
+2019-05-12 10:24:56,078 ERROR    C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "POST /backend/test0/ HTTP/1.1" 500 58944
+2019-05-12 10:26:00,236 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/2/versions HTTP/1.1" 200 0
+2019-05-12 10:26:00,333 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/versions HTTP/1.1" 200 103
+2019-05-12 10:26:00,338 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/versions/undefined/results HTTP/1.1" 200 0
+2019-05-12 10:26:00,362 WARNING  C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\utils\log.py[line:228] Not Found: /backend/tasks/versions/undefined/results
+2019-05-12 10:26:00,363 WARNING  C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/undefined/results HTTP/1.1" 404 3957
+2019-05-12 10:26:04,090 WARNING  C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\utils\log.py[line:228] Not Found: /backend/tasks/versions/undefined/results
+2019-05-12 10:26:04,094 WARNING  C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/undefined/results HTTP/1.1" 404 3957
+2019-05-12 10:26:05,727 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/interfaces HTTP/1.1" 200 858
+2019-05-12 10:26:31,831 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "POST /backend/tasks/2/run HTTP/1.1" 200 44
+2019-05-12 10:26:31,865 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2 HTTP/1.1" 200 221
+2019-05-12 10:26:32,980 ERROR    C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\utils\log.py[line:228] Internal Server Error: /backend/test0/
+Traceback (most recent call last):
+  File "C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\utils\deprecation.py", line 90, in __call__
+    response = self.process_request(request)
+  File "C:\课件\test-dev\interface_manager\backend\impi_project\interface_app\middleware.py", line 18, in process_request
+    raise MyException("用户未登录")
+interface_app.my_exception.MyException: 用户未登录
+2019-05-12 10:26:32,993 ERROR    C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "POST /backend/test0/ HTTP/1.1" 500 58944
+2019-05-12 10:26:34,122 ERROR    C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\utils\log.py[line:228] Internal Server Error: /backend/test1/
+Traceback (most recent call last):
+  File "C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\utils\deprecation.py", line 90, in __call__
+    response = self.process_request(request)
+  File "C:\课件\test-dev\interface_manager\backend\impi_project\interface_app\middleware.py", line 18, in process_request
+    raise MyException("用户未登录")
+interface_app.my_exception.MyException: 用户未登录
+2019-05-12 10:26:34,125 ERROR    C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/test1/ HTTP/1.1" 500 58930
+2019-05-12 10:27:54,983 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/versions HTTP/1.1" 200 164
+2019-05-12 10:27:55,035 WARNING  C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\utils\log.py[line:228] Not Found: /backend/tasks/versions/undefined/results
+2019-05-12 10:27:55,036 WARNING  C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/undefined/results HTTP/1.1" 404 3957
+2019-05-12 10:27:57,180 WARNING  C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\utils\log.py[line:228] Not Found: /backend/tasks/versions/undefined/results
+2019-05-12 10:27:57,182 WARNING  C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/undefined/results HTTP/1.1" 404 3957
+2019-05-12 10:27:58,425 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/interfaces HTTP/1.1" 200 870
+2019-05-12 10:28:08,823 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "POST /backend/tasks/2/run HTTP/1.1" 200 44
+2019-05-12 10:28:08,972 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2 HTTP/1.1" 200 221
+2019-05-12 10:28:09,994 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "POST /backend/test0/ HTTP/1.1" 200 59
+2019-05-12 10:28:11,062 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/test1/ HTTP/1.1" 200 78
+2019-05-12 10:31:02,830 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/interfaces HTTP/1.1" 200 870
+2019-05-12 10:31:36,407 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/interfaces HTTP/1.1" 200 870
+2019-05-12 10:31:39,269 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/services/ HTTP/1.1" 200 0
+2019-05-12 10:31:39,302 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/services/ HTTP/1.1" 200 364
+2019-05-12 10:31:39,848 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/ HTTP/1.1" 200 0
+2019-05-12 10:31:39,953 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 410
+2019-05-12 10:31:41,520 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/interfaces HTTP/1.1" 200 870
+2019-05-12 10:32:00,883 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/services/ HTTP/1.1" 200 364
+2019-05-12 10:32:01,582 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 410
+2019-05-12 10:32:02,946 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/interfaces HTTP/1.1" 200 870
+2019-05-12 10:32:06,011 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/versions HTTP/1.1" 200 225
+2019-05-12 10:32:06,077 WARNING  C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\utils\log.py[line:228] Not Found: /backend/tasks/versions/undefined/results
+2019-05-12 10:32:06,078 WARNING  C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/undefined/results HTTP/1.1" 404 3957
+2019-05-12 10:32:06,817 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/interfaces HTTP/1.1" 200 870
+2019-05-12 10:32:07,682 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/versions HTTP/1.1" 200 225
+2019-05-12 10:32:07,759 WARNING  C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\utils\log.py[line:228] Not Found: /backend/tasks/versions/undefined/results
+2019-05-12 10:32:07,760 WARNING  C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/undefined/results HTTP/1.1" 404 3957
+2019-05-12 10:32:08,416 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/interfaces HTTP/1.1" 200 870
+2019-05-12 10:33:34,654 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/services/ HTTP/1.1" 200 364
+2019-05-12 10:33:35,407 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 69
+2019-05-12 10:33:55,044 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/services/ HTTP/1.1" 200 364
+2019-05-12 10:33:55,211 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 69
+2019-05-12 10:34:39,426 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/services/ HTTP/1.1" 200 364
+2019-05-12 10:34:40,263 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 69
+2019-05-12 10:35:24,940 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/services/ HTTP/1.1" 200 364
+2019-05-12 10:35:25,589 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 410
+2019-05-12 10:36:51,135 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/services/ HTTP/1.1" 200 364
+2019-05-12 10:36:51,730 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 410
+2019-05-12 10:37:39,179 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/services/ HTTP/1.1" 200 364
+2019-05-12 10:37:40,227 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 410
+2019-05-12 10:38:27,392 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/services/ HTTP/1.1" 200 364
+2019-05-12 10:38:28,130 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 69
+2019-05-12 10:39:13,697 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/services/ HTTP/1.1" 200 364
+2019-05-12 10:39:14,380 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 69
+2019-05-12 10:41:33,717 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/services/ HTTP/1.1" 200 364
+2019-05-12 10:41:34,319 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 69
+2019-05-12 10:42:06,849 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/services/ HTTP/1.1" 200 0
+2019-05-12 10:42:06,918 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/services/ HTTP/1.1" 200 364
+2019-05-12 10:42:07,568 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/ HTTP/1.1" 200 0
+2019-05-12 10:42:07,636 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 69
+2019-05-12 10:44:24,475 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/services/ HTTP/1.1" 200 364
+2019-05-12 10:44:25,333 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 410
+2019-05-12 10:44:43,957 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/2/interfaces HTTP/1.1" 200 0
+2019-05-12 10:44:44,082 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/interfaces HTTP/1.1" 200 870
+2019-05-12 10:45:55,321 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/services/ HTTP/1.1" 200 0
+2019-05-12 10:45:55,386 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/services/ HTTP/1.1" 200 364
+2019-05-12 10:45:56,008 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/ HTTP/1.1" 200 0
+2019-05-12 10:45:56,106 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 69
+2019-05-12 10:47:28,295 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/services/ HTTP/1.1" 200 0
+2019-05-12 10:47:28,346 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/services/ HTTP/1.1" 200 364
+2019-05-12 10:47:28,845 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/ HTTP/1.1" 200 0
+2019-05-12 10:47:28,929 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 410
+2019-05-12 10:49:30,261 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/ HTTP/1.1" 200 0
+2019-05-12 10:49:30,857 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/user/ HTTP/1.1" 200 0
+2019-05-12 10:49:31,158 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 69
+2019-05-12 10:49:31,278 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/user/ HTTP/1.1" 200 72
+2019-05-12 10:50:11,642 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/services/ HTTP/1.1" 200 0
+2019-05-12 10:50:11,711 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/services/ HTTP/1.1" 200 364
+2019-05-12 10:50:12,102 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/ HTTP/1.1" 200 0
+2019-05-12 10:50:12,221 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 410
+2019-05-12 10:50:51,182 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/services/ HTTP/1.1" 200 0
+2019-05-12 10:50:51,244 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/services/ HTTP/1.1" 200 364
+2019-05-12 10:50:51,875 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/ HTTP/1.1" 200 0
+2019-05-12 10:50:51,998 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 410
+2019-05-12 10:51:54,019 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/services/ HTTP/1.1" 200 0
+2019-05-12 10:51:54,170 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/services/ HTTP/1.1" 200 364
+2019-05-12 10:51:54,601 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/ HTTP/1.1" 200 0
+2019-05-12 10:51:54,700 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 410
+2019-05-12 10:51:59,300 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/services/ HTTP/1.1" 200 0
+2019-05-12 10:51:59,402 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/services/ HTTP/1.1" 200 364
+2019-05-12 10:52:00,046 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/ HTTP/1.1" 200 0
+2019-05-12 10:52:00,224 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 410
+2019-05-12 10:52:29,389 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/2/interfaces HTTP/1.1" 200 0
+2019-05-12 10:52:29,512 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/interfaces HTTP/1.1" 200 870
+2019-05-12 10:53:22,272 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/2/run HTTP/1.1" 200 0
+2019-05-12 10:53:22,292 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "POST /backend/tasks/2/run HTTP/1.1" 200 44
+2019-05-12 10:53:22,310 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/2 HTTP/1.1" 200 0
+2019-05-12 10:53:22,387 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2 HTTP/1.1" 200 221
+2019-05-12 10:53:23,427 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "POST /backend/test0/ HTTP/1.1" 200 59
+2019-05-12 10:53:24,465 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/test1/ HTTP/1.1" 200 78
+2019-05-12 10:55:02,709 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/2/run HTTP/1.1" 200 0
+2019-05-12 10:55:02,735 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "POST /backend/tasks/2/run HTTP/1.1" 200 44
+2019-05-12 10:55:02,743 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/2 HTTP/1.1" 200 0
+2019-05-12 10:55:02,834 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2 HTTP/1.1" 200 221
+2019-05-12 10:55:03,996 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "POST /backend/test0/ HTTP/1.1" 200 59
+2019-05-12 10:55:05,110 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/test1/ HTTP/1.1" 200 78
+2019-05-12 10:55:37,690 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/services/ HTTP/1.1" 200 0
+2019-05-12 10:55:37,742 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/services/ HTTP/1.1" 200 364
+2019-05-12 10:55:39,207 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/services/4/interfaces HTTP/1.1" 200 0
+2019-05-12 10:55:39,221 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/services/4/interfaces HTTP/1.1" 200 44
+2019-05-12 10:55:39,877 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/services/6/interfaces HTTP/1.1" 200 0
+2019-05-12 10:55:39,904 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/services/6/interfaces HTTP/1.1" 200 768
+2019-05-12 10:55:50,329 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/interfaces/17 HTTP/1.1" 200 0
+2019-05-12 10:55:51,121 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/interfaces/17 HTTP/1.1" 200 399
+2019-05-12 10:57:46,478 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/ HTTP/1.1" 200 0
+2019-05-12 10:57:46,615 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 410
+2019-05-12 10:57:47,892 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/2/interfaces HTTP/1.1" 200 0
+2019-05-12 10:57:48,018 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/interfaces HTTP/1.1" 200 880
+2019-05-12 10:57:58,490 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/2/run HTTP/1.1" 200 0
+2019-05-12 10:57:58,511 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "POST /backend/tasks/2/run HTTP/1.1" 200 44
+2019-05-12 10:57:58,544 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/2 HTTP/1.1" 200 0
+2019-05-12 10:57:58,627 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2 HTTP/1.1" 200 221
+2019-05-12 10:57:59,707 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "POST /backend/test0/ HTTP/1.1" 200 59
+2019-05-12 10:58:00,743 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/test1/ HTTP/1.1" 200 78
+2019-05-12 10:59:25,632 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/services/ HTTP/1.1" 200 0
+2019-05-12 10:59:25,699 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/services/ HTTP/1.1" 200 364
+2019-05-12 10:59:26,302 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/ HTTP/1.1" 200 0
+2019-05-12 10:59:26,446 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 410
+2019-05-12 10:59:27,606 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/2/interfaces HTTP/1.1" 200 0
+2019-05-12 10:59:27,708 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/interfaces HTTP/1.1" 200 880
+2019-05-12 11:02:55,703 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/2/run HTTP/1.1" 200 0
+2019-05-12 11:02:55,720 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "POST /backend/tasks/2/run HTTP/1.1" 200 44
+2019-05-12 11:02:55,774 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/2 HTTP/1.1" 200 0
+2019-05-12 11:02:55,826 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2 HTTP/1.1" 200 221
+2019-05-12 11:02:56,838 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "POST /backend/test0/ HTTP/1.1" 200 59
+2019-05-12 11:02:57,894 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/test1/ HTTP/1.1" 200 78
+2019-05-12 11:03:00,920 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/ HTTP/1.1" 200 0
+2019-05-12 11:03:01,104 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 410
+2019-05-12 11:03:02,582 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/2/interfaces HTTP/1.1" 200 0
+2019-05-12 11:03:02,703 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/interfaces HTTP/1.1" 200 879
+2019-05-12 11:04:57,955 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/2/interfaces HTTP/1.1" 200 0
+2019-05-12 11:04:58,108 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/interfaces HTTP/1.1" 200 879
+2019-05-12 11:04:59,383 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/2 HTTP/1.1" 200 0
+2019-05-12 11:04:59,406 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2 HTTP/1.1" 200 227
+2019-05-12 11:05:00,212 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/2 HTTP/1.1" 200 0
+2019-05-12 11:05:00,334 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2 HTTP/1.1" 200 227
+2019-05-12 11:05:07,124 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/2/versions HTTP/1.1" 200 0
+2019-05-12 11:05:07,236 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/versions HTTP/1.1" 200 469
+2019-05-12 11:05:07,247 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/versions/undefined/results HTTP/1.1" 200 0
+2019-05-12 11:05:07,327 WARNING  C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\utils\log.py[line:228] Not Found: /backend/tasks/versions/undefined/results
+2019-05-12 11:05:07,327 WARNING  C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/undefined/results HTTP/1.1" 404 3957
+2019-05-12 11:05:16,486 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/versions/undefined/results HTTP/1.1" 200 0
+2019-05-12 11:05:16,535 WARNING  C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\utils\log.py[line:228] Not Found: /backend/tasks/versions/undefined/results
+2019-05-12 11:05:16,536 WARNING  C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/undefined/results HTTP/1.1" 404 3957
+2019-05-12 11:05:27,816 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/interfaces HTTP/1.1" 200 879
+2019-05-12 11:05:28,699 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/versions HTTP/1.1" 200 469
+2019-05-12 11:05:28,779 WARNING  C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\utils\log.py[line:228] Not Found: /backend/tasks/versions/undefined/results
+2019-05-12 11:05:28,780 WARNING  C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/undefined/results HTTP/1.1" 404 3957
+2019-05-12 11:05:37,345 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 410
+2019-05-12 11:05:40,027 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 410
+2019-05-12 11:05:41,827 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/interfaces HTTP/1.1" 200 879
+2019-05-12 11:05:43,183 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/versions HTTP/1.1" 200 469
+2019-05-12 11:05:43,232 WARNING  C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\utils\log.py[line:228] Not Found: /backend/tasks/versions/undefined/results
+2019-05-12 11:05:43,233 WARNING  C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/undefined/results HTTP/1.1" 404 3957
+2019-05-12 11:05:44,991 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/interfaces HTTP/1.1" 200 879
+2019-05-12 11:05:45,643 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/versions HTTP/1.1" 200 469
+2019-05-12 11:05:45,705 WARNING  C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\utils\log.py[line:228] Not Found: /backend/tasks/versions/undefined/results
+2019-05-12 11:05:45,705 WARNING  C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/undefined/results HTTP/1.1" 404 3957
+2019-05-12 11:05:58,955 WARNING  C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\utils\log.py[line:228] Not Found: /backend/tasks/versions/undefined/results
+2019-05-12 11:05:58,955 WARNING  C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/undefined/results HTTP/1.1" 404 3957
+2019-05-12 11:06:03,309 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/interfaces HTTP/1.1" 200 879
+2019-05-12 11:06:04,076 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/versions HTTP/1.1" 200 469
+2019-05-12 11:06:04,135 WARNING  C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\utils\log.py[line:228] Not Found: /backend/tasks/versions/undefined/results
+2019-05-12 11:06:04,136 WARNING  C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/undefined/results HTTP/1.1" 404 3957
+2019-05-12 11:06:05,111 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/services/ HTTP/1.1" 200 364
+2019-05-12 11:06:05,818 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 410
+2019-05-12 11:06:08,507 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 410
+2019-05-12 11:06:09,027 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/services/ HTTP/1.1" 200 364
+2019-05-12 11:06:09,525 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 410
+2019-05-12 11:14:03,153 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/ HTTP/1.1" 200 0
+2019-05-12 11:14:03,221 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 410
+2019-05-12 11:24:52,768 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/ HTTP/1.1" 200 0
+2019-05-12 11:24:52,857 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 410
+2019-05-12 11:35:08,950 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/ HTTP/1.1" 200 0
+2019-05-12 11:35:09,033 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/user/ HTTP/1.1" 200 0
+2019-05-12 11:35:09,098 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/user/ HTTP/1.1" 200 72
+2019-05-12 11:35:09,109 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 410
+2019-05-12 11:35:13,040 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/mocks/ HTTP/1.1" 200 0
+2019-05-12 11:35:13,238 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/mocks/ HTTP/1.1" 200 44
+2019-05-12 11:35:21,603 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/ HTTP/1.1" 200 0
+2019-05-12 11:35:21,723 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 410
+2019-05-12 11:35:22,598 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/mocks/ HTTP/1.1" 200 0
+2019-05-12 11:35:22,734 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/mocks/ HTTP/1.1" 200 44
+2019-05-12 11:36:35,052 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/mocks/ HTTP/1.1" 200 0
+2019-05-12 11:36:35,169 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/mocks/ HTTP/1.1" 200 44
+2019-05-12 11:38:29,542 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/mocks/ HTTP/1.1" 200 0
+2019-05-12 11:38:29,650 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/mocks/ HTTP/1.1" 200 44
+2019-05-12 11:40:30,958 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/mocks/ HTTP/1.1" 200 0
+2019-05-12 11:40:31,104 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/mocks/ HTTP/1.1" 200 44
+2019-05-12 11:40:46,359 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/mocks/ HTTP/1.1" 200 0
+2019-05-12 11:40:46,549 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/mocks/ HTTP/1.1" 200 44
+2019-05-12 11:42:40,401 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/mocks/ HTTP/1.1" 200 0
+2019-05-12 11:42:40,539 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/mocks/ HTTP/1.1" 200 44
+2019-05-12 11:43:29,539 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/mocks/ HTTP/1.1" 200 0
+2019-05-12 11:43:30,153 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/user/ HTTP/1.1" 200 0
+2019-05-12 11:43:30,222 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/mocks/ HTTP/1.1" 200 44
+2019-05-12 11:43:30,234 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/user/ HTTP/1.1" 200 72
+2019-05-12 11:43:52,559 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/mocks/ HTTP/1.1" 200 0
+2019-05-12 11:43:52,621 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "POST /backend/mocks/ HTTP/1.1" 200 44
+2019-05-12 11:43:52,716 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/mocks/ HTTP/1.1" 200 0
+2019-05-12 11:43:52,772 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/mocks/ HTTP/1.1" 200 136
+2019-05-12 11:44:59,561 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/ HTTP/1.1" 200 0
+2019-05-12 11:44:59,836 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 410
+2019-05-12 11:45:00,414 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/mocks/ HTTP/1.1" 200 0
+2019-05-12 11:45:00,515 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/mocks/ HTTP/1.1" 200 136
+2019-05-12 11:46:21,695 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/mocks/ HTTP/1.1" 200 0
+2019-05-12 11:46:21,812 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/mocks/ HTTP/1.1" 200 136
+2019-05-12 11:46:23,408 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/services/ HTTP/1.1" 200 0
+2019-05-12 11:46:23,504 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/services/ HTTP/1.1" 200 364
+2019-05-12 11:46:23,932 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/ HTTP/1.1" 200 0
+2019-05-12 11:46:24,071 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 410
+2019-05-12 11:46:24,497 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/mocks/ HTTP/1.1" 200 0
+2019-05-12 11:46:24,623 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/mocks/ HTTP/1.1" 200 136
+2019-05-12 11:46:38,334 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/mocks/1 HTTP/1.1" 200 0
+2019-05-12 11:46:38,359 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "PUT /backend/mocks/1 HTTP/1.1" 200 44
+2019-05-12 11:46:38,393 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/mocks/ HTTP/1.1" 200 0
+2019-05-12 11:46:38,436 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/mocks/ HTTP/1.1" 200 136
+2019-05-12 11:47:24,984 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/mocks/ HTTP/1.1" 200 0
+2019-05-12 11:47:25,083 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/mocks/ HTTP/1.1" 200 136
+2019-05-12 11:47:57,988 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/services/ HTTP/1.1" 200 0
+2019-05-12 11:47:58,085 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/services/ HTTP/1.1" 200 364
+2019-05-12 11:47:58,603 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/mocks/ HTTP/1.1" 200 0
+2019-05-12 11:47:58,700 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/mocks/ HTTP/1.1" 200 136
+2019-05-12 11:48:09,544 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/mocks/1/run HTTP/1.1" 200 11
+2019-05-12 11:48:38,919 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/mocks/ HTTP/1.1" 200 0
+2019-05-12 11:48:38,952 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "POST /backend/mocks/ HTTP/1.1" 200 44
+2019-05-12 11:48:38,966 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/mocks/ HTTP/1.1" 200 0
+2019-05-12 11:48:39,025 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/mocks/ HTTP/1.1" 200 231
+2019-05-12 11:48:46,220 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/mocks/2/run HTTP/1.1" 200 67
+2019-05-12 11:49:03,322 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/mocks/2 HTTP/1.1" 200 0
+2019-05-12 11:49:03,356 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "DELETE /backend/mocks/2 HTTP/1.1" 200 44
+2019-05-12 11:49:03,391 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/mocks/ HTTP/1.1" 200 0
+2019-05-12 11:49:03,422 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/mocks/ HTTP/1.1" 200 136
+2019-05-12 11:49:25,535 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/mocks/ HTTP/1.1" 200 0
+2019-05-12 11:49:25,578 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "POST /backend/mocks/ HTTP/1.1" 200 44
+2019-05-12 11:49:25,612 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/mocks/ HTTP/1.1" 200 0
+2019-05-12 11:49:25,690 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/mocks/ HTTP/1.1" 200 230
+2019-05-12 11:49:32,383 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/mocks/3/run HTTP/1.1" 200 11
+2019-05-12 11:49:40,294 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/services/ HTTP/1.1" 200 364
+2019-05-12 11:49:40,905 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 410
+2019-05-12 11:49:41,584 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/mocks/ HTTP/1.1" 200 230
+2019-05-12 11:50:05,335 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 410
+2019-05-12 11:50:10,841 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/2/interfaces HTTP/1.1" 200 0
+2019-05-12 11:50:10,947 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/interfaces HTTP/1.1" 200 879
+2019-05-12 11:50:18,234 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/2/versions HTTP/1.1" 200 0
+2019-05-12 11:50:18,311 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/versions HTTP/1.1" 200 469
+2019-05-12 11:50:18,322 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/versions/undefined/results HTTP/1.1" 200 0
+2019-05-12 11:50:18,357 WARNING  C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\utils\log.py[line:228] Not Found: /backend/tasks/versions/undefined/results
+2019-05-12 11:50:18,358 WARNING  C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/undefined/results HTTP/1.1" 404 4331
+2019-05-12 11:50:22,572 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/interfaces HTTP/1.1" 200 879
+2019-05-12 11:50:23,895 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/versions HTTP/1.1" 200 469
+2019-05-12 11:50:23,955 WARNING  C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\utils\log.py[line:228] Not Found: /backend/tasks/versions/undefined/results
+2019-05-12 11:50:23,956 WARNING  C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/undefined/results HTTP/1.1" 404 4331
+2019-05-12 11:50:26,824 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/interfaces HTTP/1.1" 200 879
+2019-05-12 11:50:28,053 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/versions HTTP/1.1" 200 469
+2019-05-12 11:50:28,121 WARNING  C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\utils\log.py[line:228] Not Found: /backend/tasks/versions/undefined/results
+2019-05-12 11:50:28,122 WARNING  C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/undefined/results HTTP/1.1" 404 4331
+2019-05-12 11:51:17,447 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/versions/undefined/results HTTP/1.1" 200 0
+2019-05-12 11:51:17,502 WARNING  C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\utils\log.py[line:228] Not Found: /backend/tasks/versions/undefined/results
+2019-05-12 11:51:17,503 WARNING  C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/undefined/results HTTP/1.1" 404 4331
+2019-05-12 11:51:23,086 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/2/interfaces HTTP/1.1" 200 0
+2019-05-12 11:51:23,118 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/interfaces HTTP/1.1" 200 879
+2019-05-12 11:51:23,841 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/2/versions HTTP/1.1" 200 0
+2019-05-12 11:51:23,949 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/versions HTTP/1.1" 200 469
+2019-05-12 11:51:23,973 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/versions/undefined/results HTTP/1.1" 200 0
+2019-05-12 11:51:24,031 WARNING  C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\utils\log.py[line:228] Not Found: /backend/tasks/versions/undefined/results
+2019-05-12 11:51:24,032 WARNING  C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/undefined/results HTTP/1.1" 404 4331
+2019-05-12 11:51:25,897 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/2/interfaces HTTP/1.1" 200 0
+2019-05-12 11:51:25,930 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/interfaces HTTP/1.1" 200 879
+2019-05-12 11:51:26,517 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/2/versions HTTP/1.1" 200 0
+2019-05-12 11:51:26,611 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/versions HTTP/1.1" 200 469
+2019-05-12 11:51:26,649 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/versions/undefined/results HTTP/1.1" 200 0
+2019-05-12 11:51:26,695 WARNING  C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\utils\log.py[line:228] Not Found: /backend/tasks/versions/undefined/results
+2019-05-12 11:51:26,696 WARNING  C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/undefined/results HTTP/1.1" 404 4331
+2019-05-12 11:52:56,306 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/services/ HTTP/1.1" 200 0
+2019-05-12 11:52:56,368 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/services/ HTTP/1.1" 200 364
+2019-05-12 11:52:56,809 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/ HTTP/1.1" 200 0
+2019-05-12 11:52:56,933 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 410
+2019-05-12 11:52:58,405 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/2/interfaces HTTP/1.1" 200 0
+2019-05-12 11:52:58,608 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/interfaces HTTP/1.1" 200 879
+2019-05-12 11:53:01,713 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/2/versions HTTP/1.1" 200 0
+2019-05-12 11:53:01,806 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/versions HTTP/1.1" 200 532
+2019-05-12 11:53:01,878 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/versions/7/results HTTP/1.1" 200 0
+2019-05-12 11:53:01,922 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/7/results HTTP/1.1" 200 1021
+2019-05-12 11:53:05,802 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/versions/7/results HTTP/1.1" 200 0
+2019-05-12 11:53:05,887 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/7/results HTTP/1.1" 200 1021
+2019-05-12 11:53:07,814 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/versions/4/results HTTP/1.1" 200 0
+2019-05-12 11:53:07,873 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/4/results HTTP/1.1" 200 1011
+2019-05-12 11:53:10,213 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/versions/3/results HTTP/1.1" 200 0
+2019-05-12 11:53:10,254 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/3/results HTTP/1.1" 200 1011
+2019-05-12 11:53:13,044 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/versions/1/results HTTP/1.1" 200 0
+2019-05-12 11:53:13,130 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/1/results HTTP/1.1" 200 44
+2019-05-12 11:53:15,288 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/versions/7/results HTTP/1.1" 200 0
+2019-05-12 11:53:15,346 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/7/results HTTP/1.1" 200 1021
+2019-05-12 11:53:43,539 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/2/versions HTTP/1.1" 200 0
+2019-05-12 11:53:43,742 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/versions HTTP/1.1" 200 532
+2019-05-12 11:53:43,776 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/versions/7/results HTTP/1.1" 200 0
+2019-05-12 11:53:43,820 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/7/results HTTP/1.1" 200 1021
+2019-05-12 11:53:46,877 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/versions/7/results HTTP/1.1" 200 0
+2019-05-12 11:53:46,909 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/7/results HTTP/1.1" 200 1021
+2019-05-12 11:53:51,681 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/services/ HTTP/1.1" 200 0
+2019-05-12 11:53:51,723 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/services/ HTTP/1.1" 200 364
+2019-05-12 11:53:52,207 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/ HTTP/1.1" 200 0
+2019-05-12 11:53:52,329 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 410
+2019-05-12 11:53:53,741 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/2/interfaces HTTP/1.1" 200 0
+2019-05-12 11:53:53,859 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/interfaces HTTP/1.1" 200 879
+2019-05-12 11:53:55,426 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/2/versions HTTP/1.1" 200 0
+2019-05-12 11:53:55,472 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/versions HTTP/1.1" 200 532
+2019-05-12 11:53:55,479 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/versions/7/results HTTP/1.1" 200 0
+2019-05-12 11:53:55,513 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/7/results HTTP/1.1" 200 1021
+2019-05-12 11:53:57,567 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/versions/7/results HTTP/1.1" 200 0
+2019-05-12 11:53:57,604 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/7/results HTTP/1.1" 200 1021
+2019-05-12 11:54:00,392 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/versions/6/results HTTP/1.1" 200 0
+2019-05-12 11:54:00,434 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/6/results HTTP/1.1" 200 1021
+2019-05-12 11:55:53,789 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/2/versions HTTP/1.1" 200 0
+2019-05-12 11:55:53,905 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/versions HTTP/1.1" 200 532
+2019-05-12 11:55:53,944 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/versions/7/results HTTP/1.1" 200 0
+2019-05-12 11:55:54,021 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/7/results HTTP/1.1" 200 1021
+2019-05-12 11:56:20,287 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/2/versions HTTP/1.1" 200 0
+2019-05-12 11:56:20,443 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/versions HTTP/1.1" 200 532
+2019-05-12 11:56:20,476 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/versions/7/results HTTP/1.1" 200 0
+2019-05-12 11:56:20,543 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/7/results HTTP/1.1" 200 1021
+2019-05-12 11:56:33,135 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/2/versions HTTP/1.1" 200 0
+2019-05-12 11:56:33,229 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/versions HTTP/1.1" 200 532
+2019-05-12 11:56:33,242 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/versions/7/results HTTP/1.1" 200 0
+2019-05-12 11:56:33,276 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/7/results HTTP/1.1" 200 1021
+2019-05-12 11:56:42,004 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/2/interfaces HTTP/1.1" 200 0
+2019-05-12 11:56:42,071 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/interfaces HTTP/1.1" 200 879
+2019-05-12 11:56:42,835 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/2/versions HTTP/1.1" 200 0
+2019-05-12 11:56:42,932 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/versions HTTP/1.1" 200 532
+2019-05-12 11:56:42,966 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/versions/7/results HTTP/1.1" 200 0
+2019-05-12 11:56:43,035 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/7/results HTTP/1.1" 200 1021
+2019-05-12 11:57:37,309 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/2/versions HTTP/1.1" 200 0
+2019-05-12 11:57:37,409 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/versions HTTP/1.1" 200 532
+2019-05-12 11:57:37,428 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/versions/7/results HTTP/1.1" 200 0
+2019-05-12 11:57:37,477 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/7/results HTTP/1.1" 200 1021
+2019-05-12 11:57:52,685 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/2/interfaces HTTP/1.1" 200 0
+2019-05-12 11:57:52,772 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/interfaces HTTP/1.1" 200 879
+2019-05-12 11:57:56,021 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/services/ HTTP/1.1" 200 0
+2019-05-12 11:57:56,105 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/services/ HTTP/1.1" 200 364
+2019-05-12 11:57:56,696 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/ HTTP/1.1" 200 0
+2019-05-12 11:57:56,831 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 410
+2019-05-12 11:57:58,390 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/2/interfaces HTTP/1.1" 200 0
+2019-05-12 11:57:58,542 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/interfaces HTTP/1.1" 200 879
+2019-05-12 11:57:59,930 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/2/versions HTTP/1.1" 200 0
+2019-05-12 11:58:00,003 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/versions HTTP/1.1" 200 532
+2019-05-12 11:58:00,015 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/versions/7/results HTTP/1.1" 200 0
+2019-05-12 11:58:00,082 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/7/results HTTP/1.1" 200 1021
+2019-05-12 11:58:35,508 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/2/interfaces HTTP/1.1" 200 0
+2019-05-12 11:58:35,544 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/interfaces HTTP/1.1" 200 879
+2019-05-12 11:58:36,173 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/2/versions HTTP/1.1" 200 0
+2019-05-12 11:58:36,282 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/versions HTTP/1.1" 200 532
+2019-05-12 11:58:36,334 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/versions/7/results HTTP/1.1" 200 0
+2019-05-12 11:58:36,382 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/7/results HTTP/1.1" 200 1021
+2019-05-12 11:58:59,518 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/ HTTP/1.1" 200 0
+2019-05-12 11:59:00,348 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/user/ HTTP/1.1" 200 0
+2019-05-12 11:59:00,501 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 410
+2019-05-12 11:59:00,573 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/user/ HTTP/1.1" 200 72
+2019-05-12 11:59:02,209 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/2/interfaces HTTP/1.1" 200 0
+2019-05-12 11:59:02,400 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/interfaces HTTP/1.1" 200 879
+2019-05-12 11:59:03,375 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/2/versions HTTP/1.1" 200 0
+2019-05-12 11:59:03,504 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/versions HTTP/1.1" 200 532
+2019-05-12 11:59:03,515 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/versions/7/results HTTP/1.1" 200 0
+2019-05-12 11:59:03,592 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/7/results HTTP/1.1" 200 1021
+2019-05-12 12:00:40,426 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/ HTTP/1.1" 200 0
+2019-05-12 12:00:40,934 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/user/ HTTP/1.1" 200 0
+2019-05-12 12:00:41,111 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/user/ HTTP/1.1" 200 72
+2019-05-12 12:00:41,126 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 410
+2019-05-12 12:00:42,802 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/2/interfaces HTTP/1.1" 200 0
+2019-05-12 12:00:42,951 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/interfaces HTTP/1.1" 200 879
+2019-05-12 12:00:44,100 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/2/versions HTTP/1.1" 200 0
+2019-05-12 12:00:44,215 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/versions HTTP/1.1" 200 532
+2019-05-12 12:00:44,232 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/versions/7/results HTTP/1.1" 200 0
+2019-05-12 12:00:44,305 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/7/results HTTP/1.1" 200 1021
+2019-05-12 12:01:49,973 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/2/versions HTTP/1.1" 200 0
+2019-05-12 12:01:50,134 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/versions HTTP/1.1" 200 532
+2019-05-12 12:01:50,143 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/versions/7/results HTTP/1.1" 200 0
+2019-05-12 12:01:50,189 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/7/results HTTP/1.1" 200 1021
+2019-05-12 12:04:00,283 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/versions HTTP/1.1" 200 532
+2019-05-12 12:04:00,370 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/7/results HTTP/1.1" 200 1021
+2019-05-12 12:06:42,565 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/versions HTTP/1.1" 200 532
+2019-05-12 12:06:42,656 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/7/results HTTP/1.1" 200 1021
+2019-05-12 12:07:20,062 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/versions HTTP/1.1" 200 532
+2019-05-12 12:07:20,201 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/7/results HTTP/1.1" 200 1021
+2019-05-12 12:07:24,721 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/mocks/ HTTP/1.1" 200 0
+2019-05-12 12:07:24,873 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/mocks/ HTTP/1.1" 200 230
+2019-05-12 12:07:25,602 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 410
+2019-05-12 12:07:26,870 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/interfaces HTTP/1.1" 200 879
+2019-05-12 12:07:27,966 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/versions HTTP/1.1" 200 532
+2019-05-12 12:07:28,021 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/7/results HTTP/1.1" 200 1021
+2019-05-12 12:07:30,970 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/versions/6/results HTTP/1.1" 200 0
+2019-05-12 12:07:31,029 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/6/results HTTP/1.1" 200 1021
+2019-05-12 12:08:18,156 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/versions HTTP/1.1" 200 532
+2019-05-12 12:08:18,227 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/7/results HTTP/1.1" 200 1021
+2019-05-12 12:08:21,727 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/6/results HTTP/1.1" 200 1021
+2019-05-12 12:08:24,599 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/versions/1/results HTTP/1.1" 200 0
+2019-05-12 12:08:24,631 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/1/results HTTP/1.1" 200 44
+2019-05-12 12:08:26,894 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/7/results HTTP/1.1" 200 1021
+2019-05-12 12:08:28,813 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/6/results HTTP/1.1" 200 1021
+2019-05-12 12:08:40,497 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/versions HTTP/1.1" 200 532
+2019-05-12 12:08:40,595 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/7/results HTTP/1.1" 200 1021
+2019-05-12 12:08:46,010 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/services/ HTTP/1.1" 200 0
+2019-05-12 12:08:46,087 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/services/ HTTP/1.1" 200 364
+2019-05-12 12:08:46,598 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 410
+2019-05-12 12:08:47,738 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/interfaces HTTP/1.1" 200 879
+2019-05-12 12:08:48,807 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/versions HTTP/1.1" 200 532
+2019-05-12 12:08:48,897 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/7/results HTTP/1.1" 200 1021
+2019-05-12 12:08:51,615 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/1/results HTTP/1.1" 200 44
+2019-05-12 12:08:54,166 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/7/results HTTP/1.1" 200 1021
+2019-05-12 12:10:02,264 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/versions HTTP/1.1" 200 532
+2019-05-12 12:10:02,393 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/7/results HTTP/1.1" 200 1021
+2019-05-12 12:10:43,143 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/versions HTTP/1.1" 200 532
+2019-05-12 12:10:43,239 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/7/results HTTP/1.1" 200 1021
+2019-05-12 12:11:51,453 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/2/versions HTTP/1.1" 200 0
+2019-05-12 12:11:51,581 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/versions HTTP/1.1" 200 532
+2019-05-12 12:11:51,592 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/versions/7/results HTTP/1.1" 200 0
+2019-05-12 12:11:51,626 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/7/results HTTP/1.1" 200 1021
+2019-05-12 12:12:07,109 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/services/ HTTP/1.1" 200 364
+2019-05-12 12:12:07,806 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/ HTTP/1.1" 200 0
+2019-05-12 12:12:07,907 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 410
+2019-05-12 12:12:09,156 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/2/interfaces HTTP/1.1" 200 0
+2019-05-12 12:12:09,282 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/interfaces HTTP/1.1" 200 879
+2019-05-12 12:12:10,235 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/versions HTTP/1.1" 200 532
+2019-05-12 12:12:10,328 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/7/results HTTP/1.1" 200 1021
+2019-05-12 12:12:37,604 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/interfaces HTTP/1.1" 200 879
+2019-05-12 12:12:38,885 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/versions HTTP/1.1" 200 532
+2019-05-12 12:12:38,973 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/7/results HTTP/1.1" 200 1021
+2019-05-12 12:12:39,630 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/interfaces HTTP/1.1" 200 879
+2019-05-12 12:12:40,647 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/versions HTTP/1.1" 200 532
+2019-05-12 12:12:40,704 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/7/results HTTP/1.1" 200 1021
+2019-05-12 12:12:43,179 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/interfaces HTTP/1.1" 200 879
+2019-05-12 12:12:43,949 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/versions HTTP/1.1" 200 532
+2019-05-12 12:12:44,054 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/7/results HTTP/1.1" 200 1021
+2019-05-12 12:12:56,655 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "OPTIONS /backend/tasks/2 HTTP/1.1" 200 0
+2019-05-12 12:12:56,677 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2 HTTP/1.1" 200 227
+2019-05-12 12:12:57,696 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/interfaces HTTP/1.1" 200 879
+2019-05-12 12:12:58,418 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/versions HTTP/1.1" 200 532
+2019-05-12 12:12:58,504 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/7/results HTTP/1.1" 200 1021
+2019-05-12 12:13:28,226 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/interfaces HTTP/1.1" 200 879
+2019-05-12 12:13:29,505 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/versions HTTP/1.1" 200 532
+2019-05-12 12:13:29,565 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/7/results HTTP/1.1" 200 1021
+2019-05-12 12:13:30,003 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/interfaces HTTP/1.1" 200 879
+2019-05-12 12:13:30,531 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/2/versions HTTP/1.1" 200 532
+2019-05-12 12:13:30,614 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/versions/7/results HTTP/1.1" 200 1021
+2019-05-12 12:13:39,672 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/mocks/ HTTP/1.1" 200 230
+2019-05-12 12:13:56,028 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/tasks/ HTTP/1.1" 200 410
+2019-05-12 12:13:59,115 INFO     C:\Users\xianpeijun\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\servers\basehttp.py[line:154] "GET /backend/mocks/ HTTP/1.1" 200 230

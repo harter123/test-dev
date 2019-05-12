@@ -4,6 +4,7 @@
       <el-button @click="go_back">返回</el-button>
       <el-button type="danger" @click="open_stop_task_dialog" v-if="'正在执行' === task_info.status">停止执行</el-button>
       <el-button type="primary" @click="open_run_task_dialog" v-else>执行</el-button>
+      <el-button  @click="get_current_task">更新</el-button>
     </div>
 
     <div class="task-info-style task-info-padding">
@@ -83,7 +84,6 @@
             label="操作"
             width="120">
             <template slot-scope="scope">
-              <a href="javascript:void(0)" @click="open_interface_result(scope.row)">结果</a>&nbsp; &nbsp;
               <a href="javascript:void(0)" @click="open_remove_interface(scope.row.task_interface_id)">移除</a>
             </template>
           </el-table-column>

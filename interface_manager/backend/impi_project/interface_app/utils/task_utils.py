@@ -17,9 +17,9 @@ class TaskUtils:
         v = InterfaceResult.objects.filter(task_result_id=result_id)
         for i in v:
             if i.success:
-                ret["success"] += ret["success"]
+                ret["success"] += 1
             else:
-                ret["failed"] += ret["failed"]
+                ret["failed"] += 1
         ret["total"] = ret["success"] + ret["failed"]
         return ret
 
@@ -28,19 +28,21 @@ class TaskUtils:
         if not task_id:
             return cls.get_result_summary(None)
         result = cls.get_last_result(task_id)
-        if result is None:
+        if not result:
             return cls.get_result_summary(None)
-        ret = cls.get_result_summary(result.id)
-        return ret
+        else:
+            ret = cls.get_result_summary(result.id)
+            return ret
 
     @classmethod
     def get_last_result(cls, task_id):
         if not task_id:
             return None
-        results = TaskResult.objects.filter(task_id=task_id).order_by('-version')
+        results = TaskResult.objects.filter(task_id=task_id).order_by('-id')
         if 0 == len(results):
             return None
-        return results[0]
+        else:
+            return results[0]
 
     @classmethod
     def get_last_interface_result(cls, result_id, interface_id):

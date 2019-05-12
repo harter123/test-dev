@@ -2,18 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5bdc36f4-f069-47b5-98e8-3c0b887d0976" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/interface_app/utils/run_task_utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interface_app/views/debug/test_list1_views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../frontend/impi_project/src/components/task/interface_result_detail.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface_app/form/mock.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface_app/models/mock.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface_app/views/mock/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface_app/views/mock/mock_detail_views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface_app/views/mock/mock_list_views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../frontend/impi_project/src/components/mock/mock.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../frontend/impi_project/src/requests/mock.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a6aefba7-2b3a-4148-aa07-a3d2d7368368.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a6aefba7-2b3a-4148-aa07-a3d2d7368368.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/impi_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/impi_project/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/impi_project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/impi_project/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface_app/views/debug/test_list_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface_app/views/debug/test_list0_views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface_app/views/task/task_detail_runl_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface_app/views/task/task_detail_runl_views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface_app/views/task/task_detail_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface_app/views/task/task_detail_views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface_app/middleware.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface_app/middleware.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface_app/utils/run_task_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface_app/utils/run_task_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface_app/utils/task_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface_app/utils/task_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface_app/views/task/task_detail_results_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface_app/views/task/task_detail_results_views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface_app/views/user_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface_app/views/user_views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/django.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/django.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/impi_project/src/components/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/impi_project/src/components/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/impi_project/src/components/login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/impi_project/src/components/login.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../frontend/impi_project/src/components/task/task_detail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/impi_project/src/components/task/task_detail.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/impi_project/src/requests/task.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/impi_project/src/requests/task.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/impi_project/src/components/task/task_result_list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/impi_project/src/components/task/task_result_list.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -49,6 +59,13 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="main: schema" type="90513b60:SqliteImplModel$Schema" />
       </path>
+      <path>
+        <item name="数据库" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db.sqlite3" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="90513b60:SqliteImplModel$Schema" />
+        <item name="interface_app_mock: table" type="ffe0bd85:SqliteImplModel$Table" />
+      </path>
     </expand>
     <select />
   </component>
@@ -78,59 +95,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="run_task_utils.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/interface_app/utils/run_task_utils.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
-              <caret line="195" lean-forward="true" selection-start-line="195" selection-end-line="195" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="result.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/interface_app/models/result.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="task_detail_results_views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/interface_app/views/task/task_detail_results_views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
-              <caret line="46" selection-start-line="46" selection-end-line="46" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="task_utils.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/interface_app/utils/task_utils.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
-              <folding>
-                <element signature="e#0#45#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/impi_project/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="46" column="36" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
+            <state relative-caret-position="528">
+              <caret line="62" column="42" lean-forward="true" selection-start-line="62" selection-start-column="42" selection-end-line="62" selection-end-column="42" />
               <folding>
                 <element signature="e#636#668#0" expanded="true" />
               </folding>
@@ -138,20 +107,92 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="common.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/interface_app/common.py">
+      <file leaf-file-name="task_detail_results_views.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/interface_app/views/task/task_detail_results_views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="9" column="16" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="16" />
+            <state relative-caret-position="299">
+              <caret line="22" column="11" lean-forward="true" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="interface_utils.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/interface_app/utils/interface_utils.py">
+      <file leaf-file-name="test_list1_views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/interface_app/views/debug/test_list1_views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="44" column="8" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="8" />
+            <state relative-caret-position="155">
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="common.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/interface_app/common.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="174">
+              <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mock.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/interface_app/models/mock.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mock.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/interface_app/form/mock.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mock_list_views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/interface_app/views/mock/mock_list_views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="560">
+              <caret line="46" column="13" lean-forward="true" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mock_detail_views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/interface_app/views/mock/mock_detail_views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1587">
+              <caret line="69" column="8" selection-start-line="69" selection-start-column="8" selection-end-line="69" selection-end-column="8" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="interface_app_service" pinned="false" current-in-tab="false">
+        <entry file="das://a6aefba7-2b3a-4148-aa07-a3d2d7368368/schema/main/table/interface_app_service">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/impi_project/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="62">
+              <caret line="153" column="16" selection-start-line="153" selection-start-column="16" selection-end-line="153" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -173,9 +214,6 @@
       <list>
         <option value="$PROJECT_DIR$/interface_app/models.py" />
         <option value="$PROJECT_DIR$/interface_app/form/user.py" />
-        <option value="$PROJECT_DIR$/interface_app/middleware.py" />
-        <option value="$PROJECT_DIR$/impi_project/settings.py" />
-        <option value="$PROJECT_DIR$/interface_app/views/user_views.py" />
         <option value="$PROJECT_DIR$/interface_app/utils/service_utils.py" />
         <option value="$PROJECT_DIR$/interface_app/models/base.py" />
         <option value="$PROJECT_DIR$/interface_app/models/service.py" />
@@ -195,18 +233,22 @@
         <option value="$PROJECT_DIR$/interface_app/form/task.py" />
         <option value="$PROJECT_DIR$/interface_app/models/task.py" />
         <option value="$PROJECT_DIR$/interface_app/models/result.py" />
-        <option value="$PROJECT_DIR$/interface_app/views/task/task_list_views.py" />
-        <option value="$PROJECT_DIR$/interface_app/utils/task_utils.py" />
-        <option value="$PROJECT_DIR$/interface_app/views/task/task_detail_results_views.py" />
         <option value="$PROJECT_DIR$/interface_app/views/task/task_detail_interfaces_views.py" />
         <option value="$PROJECT_DIR$/interface_app/views/task/task_detail_views.py" />
         <option value="$PROJECT_DIR$/interface_app/views/debug/test_list_views.py" />
         <option value="$PROJECT_DIR$/interface_app/views/debug/test_list1_views.py" />
-        <option value="$PROJECT_DIR$/impi_project/urls.py" />
         <option value="$PROJECT_DIR$/interface_app/views/debug/test_list0_views.py" />
         <option value="$PROJECT_DIR$/interface_app/common.py" />
         <option value="$PROJECT_DIR$/interface_app/views/task/task_detail_runl_views.py" />
+        <option value="$PROJECT_DIR$/impi_project/settings.py" />
+        <option value="$PROJECT_DIR$/interface_app/views/user_views.py" />
+        <option value="$PROJECT_DIR$/interface_app/middleware.py" />
+        <option value="$PROJECT_DIR$/interface_app/views/task/task_list_views.py" />
+        <option value="$PROJECT_DIR$/interface_app/utils/task_utils.py" />
         <option value="$PROJECT_DIR$/interface_app/utils/run_task_utils.py" />
+        <option value="$PROJECT_DIR$/impi_project/urls.py" />
+        <option value="$PROJECT_DIR$/interface_app/views/mock/mock_detail_views.py" />
+        <option value="$PROJECT_DIR$/interface_app/views/task/task_detail_results_views.py" />
       </list>
     </option>
   </component>
@@ -219,8 +261,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="5" />
     <option name="y" value="6" />
-    <option name="width" value="1025" />
-    <option name="height" value="813" />
+    <option name="width" value="994" />
+    <option name="height" value="820" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -250,6 +292,18 @@
               <item name="impi_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="impi_project" type="462c0819:PsiDirectoryNode" />
               <item name="interface_app" type="462c0819:PsiDirectoryNode" />
+              <item name="form" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="impi_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="impi_project" type="462c0819:PsiDirectoryNode" />
+              <item name="interface_app" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="impi_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="impi_project" type="462c0819:PsiDirectoryNode" />
+              <item name="interface_app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -257,7 +311,7 @@
               <item name="impi_project" type="462c0819:PsiDirectoryNode" />
               <item name="interface_app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="debug" type="462c0819:PsiDirectoryNode" />
+              <item name="mock" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="impi_project" type="b2602c69:ProjectViewProjectNode" />
@@ -281,16 +335,16 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\课件\test-dev\interface_manager\backend\impi_project\interface_app\views\mock" />
+      <recent name="C:\课件\test-dev\interface_manager\backend\impi_project\interface_app\form" />
+      <recent name="C:\课件\test-dev\interface_manager\backend\impi_project\interface_app\models" />
+      <recent name="C:\课件\test-dev\interface_manager\backend\impi_project\interface_app\views\debug" />
+      <recent name="C:\课件\test-dev\interface_manager\backend\impi_project\interface_app\utils" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="H:\chenchaohong\课件\test-dev\interface_manager\backend\impi_project\interface_app\models" />
       <recent name="H:\chenchaohong\课件\test-dev\interface_manager\backend\impi_project\interface_app\views" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\课件\test-dev\interface_manager\backend\impi_project\interface_app\views\debug" />
-      <recent name="C:\课件\test-dev\interface_manager\backend\impi_project\interface_app\utils" />
-      <recent name="C:\课件\test-dev\interface_manager\backend\impi_project\interface_app\views\task" />
-      <recent name="C:\课件\test-dev\interface_manager\backend\impi_project\interface_app\form" />
-      <recent name="C:\课件\test-dev\interface_manager\backend\impi_project\interface_app\models" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -378,8 +432,7 @@
     <option name="totallyTimeSpent" value="34318000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="5" y="6" width="1025" height="813" extended-state="0" />
-    <editor active="true" />
+    <frame x="5" y="6" width="994" height="820" extended-state="0" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="调试" order="10" />
@@ -387,11 +440,12 @@
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Python Console" order="14" />
-      <window_info anchor="bottom" id="运行" order="7" sideWeight="0.4989605" weight="0.2435312" />
-      <window_info anchor="bottom" id="Terminal" order="13" weight="0.22734761" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.36580312" />
+      <window_info anchor="bottom" id="运行" order="7" sideWeight="0.4989605" weight="0.25753012" />
+      <window_info anchor="bottom" id="Terminal" order="13" weight="0.36144578" />
+      <window_info anchor="bottom" id="Database Console" order="15" weight="0.32831326" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.35331905" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="5" weight="0.34611398" />
+      <window_info anchor="right" id="Database" order="5" weight="0.29336187" />
       <window_info anchor="right" id="SciView" order="4" weight="0.32952183" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -404,12 +458,11 @@
       <window_info anchor="right" id="数据库" order="0" weight="0.3118503" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Database Console" order="15" weight="0.32876712" />
       <window_info anchor="bottom" id="Find" order="1" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="bottom" id="运行" order="7" sideWeight="0.4989605" weight="0.2435312" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.36580312" />
+      <window_info anchor="bottom" id="Database Console" order="15" visible="true" weight="0.32831326" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.35331905" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
@@ -419,14 +472,14 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.17976032" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="运行" order="7" sideWeight="0.4989605" weight="0.25753012" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Database Console" order="15" weight="0.32876712" />
-      <window_info anchor="right" id="Database" order="5" weight="0.34611398" />
+      <window_info anchor="right" id="Database" order="5" visible="true" weight="0.29336187" />
       <window_info anchor="right" id="数据库" order="0" weight="0.3118503" />
-      <window_info anchor="bottom" id="Terminal" order="13" weight="0.22734761" />
+      <window_info anchor="bottom" id="Terminal" order="13" weight="0.36144578" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5010395" side_tool="true" weight="0.2306425" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="调试" order="10" />
@@ -447,72 +500,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/impi_project/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="30" column="79" lean-forward="true" selection-start-line="30" selection-start-column="79" selection-end-line="30" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interface_app/form/service.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interface_app/views/service/service_detail_views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="15" column="11" lean-forward="true" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interface_app/models/service.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/python3.7.1/Lib/site-packages/django/contrib/auth/base_user.py" />
-    <entry file="file://C:/python3.7.1/Lib/site-packages/django/contrib/auth/models.py" />
-    <entry file="file://C:/python3.7.1/Lib/site-packages/django/forms/forms.py" />
-    <entry file="file://$PROJECT_DIR$/interface_app/middleware.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/impi_project/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="198" column="8" lean-forward="true" selection-start-line="198" selection-start-column="8" selection-end-line="203" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logs/django.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logs/interface.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="154" selection-start-column="144" selection-end-column="154" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interface_app/views/user_views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/interface_app/utils/service_utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
@@ -649,16 +636,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/interface_app/views/task/task_list_views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="26" column="12" lean-forward="true" selection-start-line="26" selection-start-column="12" selection-end-line="33" selection-end-column="72" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/interface_app/models/task.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="429">
@@ -676,13 +653,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://a6aefba7-2b3a-4148-aa07-a3d2d7368368/schema/main/table/interface_app_interface">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/interface_app/views/task/task_detail_views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -693,61 +663,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/interface_app/views/task/task_detail_results_views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/interface_app/views/task/task_detail_interfaces_views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
           <caret line="49" column="8" selection-start-line="49" selection-start-column="8" selection-end-line="50" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interface_app/views/debug/test_list0_views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="13" column="11" lean-forward="true" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/impi_project/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="46" column="36" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
-          <folding>
-            <element signature="e#636#668#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interface_app/common.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="9" column="16" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interface_app/views/debug/test_list1_views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interface_app/views/task/task_detail_runl_views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
@@ -766,37 +685,195 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/interface_app/utils/interface_utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
+        <state relative-caret-position="989">
           <caret line="44" column="8" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/interface_app/utils/task_utils.py">
+    <entry file="das://a6aefba7-2b3a-4148-aa07-a3d2d7368368/schema/main/table/interface_app_task">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://a6aefba7-2b3a-4148-aa07-a3d2d7368368/schema/main/table/interface_app_taskresult">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface_app/middleware.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="165">
+          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/interface_app/models/result.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        <state relative-caret-position="98">
+          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/interface_app/utils/run_task_utils.py">
+    <entry file="file://$PROJECT_DIR$/interface_app/utils/task_utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="195" lean-forward="true" selection-start-line="195" selection-end-line="195" />
+        <state relative-caret-position="529">
+          <caret line="23" column="18" lean-forward="true" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface_app/views/user_views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="14" column="44" lean-forward="true" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface_app/views/task/task_list_views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-92">
+          <caret line="33" column="53" selection-start-line="33" selection-start-column="53" selection-end-line="33" selection-end-column="53" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface_app/utils/run_task_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="118" column="23" lean-forward="true" selection-start-line="118" selection-start-column="23" selection-end-line="118" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface_app/views/task/task_detail_runl_views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface_app/views/debug/test_list0_views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="17" column="15" lean-forward="true" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://a6aefba7-2b3a-4148-aa07-a3d2d7368368/schema/main/table/interface_app_interface">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://a6aefba7-2b3a-4148-aa07-a3d2d7368368/schema/main/table/interface_app_taskinterface">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://a6aefba7-2b3a-4148-aa07-a3d2d7368368/schema/main/table/interface_app_interfaceresult">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface_app/views/debug/test_list1_views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/impi_project/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="153" column="16" selection-start-line="153" selection-start-column="16" selection-end-line="153" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/impi_project/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="62" column="42" lean-forward="true" selection-start-line="62" selection-start-column="42" selection-end-line="62" selection-end-column="42" />
+          <folding>
+            <element signature="e#636#668#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface_app/models/mock.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface_app/form/mock.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface_app/common.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface_app/views/mock/mock_list_views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="46" column="13" lean-forward="true" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface_app/views/mock/mock_detail_views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1587">
+          <caret line="69" column="8" selection-start-line="69" selection-start-column="8" selection-end-line="69" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://a6aefba7-2b3a-4148-aa07-a3d2d7368368/schema/main/table/interface_app_service">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface_app/views/task/task_detail_results_views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="22" column="11" lean-forward="true" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>

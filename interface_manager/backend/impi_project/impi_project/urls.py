@@ -30,6 +30,8 @@ from interface_app.views.task.task_detail_interfaces_views import TaskDetailInte
 from interface_app.views.task.task_detail_results_views import TaskDetailVersionResultsViews
 from interface_app.views.task.task_detail_results_views import TaskDetailVersionViews
 from interface_app.views.task.task_detail_runl_views import TaskDetailRunViews
+from interface_app.views.mock.mock_list_views import MockListViews
+from interface_app.views.mock.mock_detail_views import MockDetailViews, run_mock
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -54,4 +56,9 @@ urlpatterns = [
     path('backend/tasks/versions/<int:pk>/results', TaskDetailVersionResultsViews.as_view()),
 
     path('backend/tasks/<int:pk>/run', TaskDetailRunViews.as_view()),
+
+    path('backend/mocks/', MockListViews.as_view()),
+    path('backend/mocks/<int:pk>', MockDetailViews.as_view()),
+
+    path('backend/mocks/<int:pk>/run', run_mock),
 ]
