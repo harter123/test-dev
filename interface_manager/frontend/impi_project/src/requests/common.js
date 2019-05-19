@@ -1,6 +1,6 @@
 import VueCookies from "vue-cookies";
 
-export const host = 'http://127.0.0.1:8000/';
+export const host = 'http://127.0.0.1/';
 
 export const post_code = function (url, params) {
   let body = JSON.stringify(params);
